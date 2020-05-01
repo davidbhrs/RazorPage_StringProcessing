@@ -5,14 +5,15 @@
 
 <h1 class="display-4"> Überprüfung und Verarbeitung eines Strings mit ASP.Net </h1>
 <form method="post">
-    <p>
+    <p id="introduction">
         Bitte geben Sie hier eine beliebige Zeichenkette ein. <br /> <br />
         <b>Hinweis: </b>Achten Sie darauf, dass die Zeichenkette <u>mindestens</u> aus 10 Wörtern besteht. <br /> <br />
         Viel Spaß mit der App :-)
     </p>
     <p>
         Zeichenkette:
-        <textarea asp-for="inputString" placeholder="Zeichenkette eingeben"></textarea>
+        <textarea asp-for="inputString" placeholder="Zeichenkette eingeben"></textarea> <br />
+        <span class="validation" asp-validation-for="inputString"></span>
     </p><br />
     <button type="submit">Absenden</button>
 </form>
