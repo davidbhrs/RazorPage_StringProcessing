@@ -109,3 +109,4 @@ D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_Str
 D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\Razor\Pages\stringProcessing.cshtml.g.cs
 D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\ASPdotNet_StringVerarbeitung.csprojAssemblyReference.cache
+D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\Razor\Pages\test.cshtml.g.cs
