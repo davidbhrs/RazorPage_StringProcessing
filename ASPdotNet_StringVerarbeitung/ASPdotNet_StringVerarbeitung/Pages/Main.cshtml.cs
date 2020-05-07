@@ -4,22 +4,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 using System.ComponentModel.DataAnnotations;
 
 namespace ASPdotNet_StringVerarbeitung.Pages
 {
-    public class testModel : PageModel
+    public class MainModel : PageModel
     {
         [BindProperty]
-        [Required]
-        [RegularExpression(@"(.*\s){9}..*")]
+        [Required (ErrorMessage = "Sie haben keine Zeichenkette eingegeben")]
+        [RegularExpression(@"(.*\s){9}..*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
         public string inputString { get; set; }
 
-        bool startup = true;
-        string newString = "";
+        string newString = "Sie haben noch keine Eingabe getätigt.";
         char[] vokale = { 'a', 'e', 'i', 'o', 'u' };
         char newChar = ' ';
+        string[] words = { };
+        int wordNum = 0;
 
 
 
@@ -31,15 +31,18 @@ namespace ASPdotNet_StringVerarbeitung.Pages
 
         public IActionResult OnPost()
         {
-            startup = false;
-            string[] words = inputString.Split(" ");
-            int wordNum = words.Length;
-            if (words.Contains("exit"))
+            if (ModelState.IsValid)
             {
-                return RedirectToPage("/index");
-            }
-            if (wordNum >= 10)
-            {
+                newString = "Neue Zeichenkette: ";
+
+                words = inputString.Split(" ");
+                wordNum = words.Length;
+
+                if (words.Contains("exit"))
+                {
+                    return RedirectToPage("/index");
+                }
+
                 foreach (var character in inputString)
                 {
                     if (vokale.Contains(character))
@@ -53,13 +56,12 @@ namespace ASPdotNet_StringVerarbeitung.Pages
                     }
                 }
             }
+
             else
             {
-                newString = "Sie müssen mindestens 10 Wörter eingeben," +
-                    " um die App verwenden zu können. In Ihrer aktuellen " +
-                    $"Zeichenkette befinden sich allerdings nur { wordNum } " +
-                    "Wörter.";
+                newString = "Ihre Eingabe war ungültig.";
             }
+
             ViewData["result"] = newString;
             return Page();
         }

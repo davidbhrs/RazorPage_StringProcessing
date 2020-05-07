@@ -1,6 +1,7 @@
 ﻿@page
-@model ASPdotNet_StringVerarbeitung.Pages.stringProcessingModel
+@model ASPdotNet_StringVerarbeitung.Pages.MainModel
 @{
+    ViewData["Title"] = "Main";
 }
 
 <h1 class="display-4"> Überprüfung und Verarbeitung eines Strings mit ASP.Net </h1>
@@ -17,15 +18,11 @@
     </p><br />
     <button type="submit">Absenden</button>
 </form>
+<form method="get" action="/">
+    <button type="submit">Exit</button>
+</form>
 
 <h2 class="display-4"> Überarbeitete Zeichenkette </h2>
-@if (true)
-{
-    <p>Neue Zeichenkette: @ViewData["result"]</p>
-}
-else
-{
-    <p>Es wurde noch keine Zeichenkette eingegeben.</p>
-    <p></p>
-}
+
+<p>@ViewData["result"]</p>
 
