@@ -1,0 +1,51 @@
+﻿body {
+}
+
+
+
+/* Header */
+.navbar {
+   padding: 10px 5% 10px;
+}
+#home {
+    font-size: 20pt;
+}
+
+
+
+/* Headings */
+h1 {
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+h2 {
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+
+
+/* Index */
+#startButton {
+    position: absolute;
+    vertical-align: central;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 55%;
+}
+
+
+
+/* Formatting */
+.validation {
+    color: red;
+}
+
+.paragraph {
+    line-height: 2;
+}

@@ -3,24 +3,27 @@
 @{
     ViewData["Title"] = "Main";
 }
-
-<h1 class="display-4"> Überprüfung und Verarbeitung eines Strings mit ASP.Net </h1>
+<p class="paragraph">
+    Bitte geben Sie hier eine beliebige Zeichenkette ein. <br />
+    <b>Hinweis: </b>Achten Sie darauf, dass die Zeichenkette <u>mindestens</u> aus 10 Wörtern besteht. <br />
+    Viel Spaß mit der App :-)
+</p>
+<br />
+<br />
 <form method="post">
-    <p id="introduction">
-        Bitte geben Sie hier eine beliebige Zeichenkette ein. <br /> <br />
-        <b>Hinweis: </b>Achten Sie darauf, dass die Zeichenkette <u>mindestens</u> aus 10 Wörtern besteht. <br /> <br />
-        Viel Spaß mit der App :-)
-    </p>
-    <p>
-        Zeichenkette:
-        <textarea asp-for="inputString" placeholder="Zeichenkette eingeben"></textarea> <br />
-        <span class="validation" asp-validation-for="inputString"></span>
-    </p><br />
-    <button type="submit">Absenden</button>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Zeichenkette</span>
+        </div>
+        <textarea asp-for="inputString" placeholder="Zeichenkette eingeben" class="form-control shadow-lg rounded" aria-label="inputString"></textarea>
+    </div>
+    <span class="validation" asp-validation-for="inputString"></span>
+    <br />
+    <button type="submit" class="btn btn-outline-success">Absenden</button>
+    <button type="reset" class="btn btn-outline-warning">Zurücksetzen</button>
+    <a type="button" class="btn btn-outline-danger" href="/">Exit</a>
 </form>
-<form method="get" action="/">
-    <button type="submit">Exit</button>
-</form>
+
 
 <h2 class="display-4"> Überarbeitete Zeichenkette </h2>
 

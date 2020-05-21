@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Nr. 6</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!--Bootstrap 4-->
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
 </head>
-<body>
-    <header>
+<body class="bg-dark">
+    <header class="sticky-top">
+        <!--
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Portfolio Nr. 6</a>
@@ -25,19 +28,42 @@
                 </div>
             </div>
         </nav>
+        -->
+
+
+
+        <nav class="navbar navbar-inverse navbar-expand-sm bg-success navbar-dark shadow-lg z-depth-5">
+            <div class="container-fluid">
+                <div class="nav-header">
+                    <a id="home" class="navbar-brand" href="/">Portfolio Nr. 6</a>
+                </div>
+            </div>
+        </nav>
+        <!--
+        <div class="jumbotron bg-success text-light">
+            <div class="container text-center">
+                <h1 class="display-4">Portfolio Nr. 6</h1>
+            </div>
+        </div>
+            -->
     </header>
-    <div class="container">
+    <div class="container text-light">
         <main role="main" class="pb-3">
-            <!--Index.html-->
-            @RenderBody()
+            <!--Body soll mittig ausgerichtet sein-->
+            <div class="text-center">
+                <h1 class="display-3"> Überprüfung und Verarbeitung eines Strings mit ASP.Net </h1>
+                @RenderBody()
+            </div>
         </main>
     </div>
 
+    <!--
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - ASPdotNet_StringVerarbeitung - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+    -->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

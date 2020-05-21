@@ -20526,13 +20526,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\gitRepos\\KimmigPortfolio_ASPdotNet\\ASPdotNet_StringVerarbeitung\\ASPdotNet_StringVerarbeitung\\Pages\\_ViewImports.cshtml",
-      "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FilePath": "d:\\gitRepos\\KimmigPortfolio_ASPdotNet\\ASPdotNet_StringVerarbeitung\\ASPdotNet_StringVerarbeitung\\Pages\\Main.cshtml",
+      "TargetPath": "Pages\\Main.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\gitRepos\\KimmigPortfolio_ASPdotNet\\ASPdotNet_StringVerarbeitung\\ASPdotNet_StringVerarbeitung\\Pages\\test.cshtml",
-      "TargetPath": "Pages\\test.cshtml",
+      "FilePath": "d:\\gitRepos\\KimmigPortfolio_ASPdotNet\\ASPdotNet_StringVerarbeitung\\ASPdotNet_StringVerarbeitung\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20548,11 +20548,6 @@
     {
       "FilePath": "d:\\gitRepos\\KimmigPortfolio_ASPdotNet\\ASPdotNet_StringVerarbeitung\\ASPdotNet_StringVerarbeitung\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\gitRepos\\KimmigPortfolio_ASPdotNet\\ASPdotNet_StringVerarbeitung\\ASPdotNet_StringVerarbeitung\\Pages\\stringProcessing.cshtml",
-      "TargetPath": "Pages\\stringProcessing.cshtml",
       "FileKind": "mvc"
     },
     {
