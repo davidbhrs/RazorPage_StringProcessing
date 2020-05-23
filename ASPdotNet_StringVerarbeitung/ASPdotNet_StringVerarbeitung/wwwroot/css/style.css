@@ -1,4 +1,5 @@
 ﻿body {
+
 }
 
 
@@ -17,11 +18,6 @@
 h1 {
     margin-top: 60px;
     margin-bottom: 70px;
-}
-
-h2 {
-    margin-top: 150px;
-    margin-bottom: 50px;
 }
 
 
@@ -43,9 +39,12 @@ h2 {
 
 /* Formatting */
 .validation {
-    color: red;
+    /*color: red;*/
 }
 
 .paragraph {
     line-height: 2;
+}
+.myButton {
+    width: 30px;
 }

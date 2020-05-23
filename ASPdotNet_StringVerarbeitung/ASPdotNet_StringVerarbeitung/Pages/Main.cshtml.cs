@@ -14,12 +14,16 @@ namespace ASPdotNet_StringVerarbeitung.Pages
         [Required (ErrorMessage = "Sie haben keine Zeichenkette eingegeben")]
         [RegularExpression(@"(.*\s){9}..*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
         public string inputString { get; set; }
+        public bool val = false;
+        public bool activated = false;
 
-        string newString = "Sie haben noch keine Eingabe getätigt.";
+        string newString = "";
         char[] vokale = { 'a', 'e', 'i', 'o', 'u' };
         char newChar = ' ';
         string[] words = { };
         int wordNum = 0;
+
+        
 
 
 
@@ -31,9 +35,10 @@ namespace ASPdotNet_StringVerarbeitung.Pages
 
         public IActionResult OnPost()
         {
+            activated = true;
             if (ModelState.IsValid)
             {
-                newString = "Neue Zeichenkette: ";
+                val = true;
 
                 words = inputString.Split(" ");
                 wordNum = words.Length;
@@ -59,7 +64,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
 
             else
             {
-                newString = "Ihre Eingabe war ungültig.";
+                //newString = "Ihre Eingabe war ungültig.";
             }
 
             ViewData["result"] = newString;
