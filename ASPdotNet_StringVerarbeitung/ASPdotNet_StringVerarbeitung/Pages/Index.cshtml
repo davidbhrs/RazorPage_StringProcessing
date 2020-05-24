@@ -5,7 +5,60 @@
 }
 
 
-<form method="get" action="/Main">
-    <button type="submit" id="startButton" class="btn btn-success btn-lg shadow-lg rounded">Anwendung starten</button>
-</form>
+@if (@Model.started)
+{
+    <p class="paragraph">
+        Bitte geben Sie hier eine beliebige Zeichenkette ein. <br />
+        <b>Hinweis: </b>Achten Sie darauf, dass die Zeichenkette <u>mindestens</u> aus 10 Wörtern besteht. <br />
+        Viel Spaß mit der App :-)
+    </p>
+
+    <br />
+    <br />
+
+    <form method="post">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Zeichenkette</span>
+            </div>
+            <textarea asp-for="inputString" placeholder="Zeichenkette eingeben" class="form-control shadow-lg rounded" aria-label="inputString" id="inputString"></textarea>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-success ml-4 mr-4 w-25 mt-2 shadow-lg" asp-page-handler="Processing">Absenden</button>
+        <button class="btn btn-outline-warning ml-4 mr-4 w-25 mt-2 shadow-lg" onclick="resettingButton()">Zurücksetzen</button>
+        <a type="button" class="btn btn-outline-danger ml-4 mr-4 w-25 mt-2 shadow-lg" href="/">Exit</a>
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    @if (@Model.val)
+    {
+        <div class="jumbotron jumbotron-fluid bg-success my-auto shadow-lg rounded p-4" id="jumbo">
+            <h2 class="display-4 text-light mt-4 mb-4 text-left"> Überarbeitete Zeichenkette </h2>
+            <div class="container h-100 d-flex text-left">
+                <code class="lead text-light text-left">@ViewData["result"]</code>
+            </div>
+        </div>
+    }
+    else if (!@Model.val && @Model.activated)
+    {
+        <div class="jumbotron jumbotron-fluid bg-danger my-auto shadow-lg rounded p-4 text-light">
+            <h2 class="display-4 mt-4 mb-4 text-left"> Überarbeitete Zeichenkette </h2>
+            <div class="container h-100 d-flex text-left">
+                <span class="lead validation rounded p-1 font-weight-normal text-light" asp-validation-for="inputString"></span>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <form method="post">
+        <button type="submit" id="startButton" class="btn btn-success btn-lg shadow-lg rounded" asp-page-handler="Starting">Anwendung starten</button>
+    </form>
+}
 
