@@ -108,7 +108,6 @@ D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_Str
 D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\ASPdotNet_StringVerarbeitung.csprojAssemblyReference.cache
-D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\Razor\Pages\Main.cshtml.g.cs
 C:\Users\dbaeh\Documents\GitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\dbaeh\Documents\GitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\dbaeh\Documents\GitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
