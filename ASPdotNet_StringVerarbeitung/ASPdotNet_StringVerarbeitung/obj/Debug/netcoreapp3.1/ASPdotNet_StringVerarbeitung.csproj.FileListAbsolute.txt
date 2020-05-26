@@ -219,4 +219,3 @@ C:\Users\dbaeh\Documents\GitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVera
 C:\Users\dbaeh\Documents\GitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\ASPdotNet_StringVerarbeitung.dll
 C:\Users\dbaeh\Documents\GitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\ASPdotNet_StringVerarbeitung.pdb
 C:\Users\dbaeh\Documents\GitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\ASPdotNet_StringVerarbeitung.genruntimeconfig.cache
-D:\gitRepos\KimmigPortfolio_ASPdotNet\ASPdotNet_StringVerarbeitung\ASPdotNet_StringVerarbeitung\obj\Debug\netcoreapp3.1\Razor\Pages\statistic.cshtml.g.cs

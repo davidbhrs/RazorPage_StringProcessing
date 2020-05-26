@@ -91,107 +91,22 @@ else
 
 
 
-
+    <!--Google Charts-->
     <input type="hidden" value="@Model.aNum" id="aNum" />
     <input type="hidden" value="@Model.eNum" id="eNum" />
     <input type="hidden" value="@Model.iNum" id="iNum" />
     <input type="hidden" value="@Model.oNum" id="oNum" />
     <input type="hidden" value="@Model.uNum" id="uNum" />
 
-    <!--Google Charts-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        a = Number(document.getElementById("aNum").value);
-        e = Number(document.getElementById("eNum").value);
-        o = Number(document.getElementById("oNum").value);
-        u = Number(document.getElementById("uNum").value);
-
-        console.log(a);
-
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-
-            var data = google.visualization.arrayToDataTable([
-                ['Vokal', 'Änderungen'],
-                ['a', a],
-                ['e', e],
-                ['o', o],
-                ['u', u]
-            ]);
-
-            var options = {
-                title: 'Ersetzte Vokale',
-                backgroundColor: { fill: 'transparent' },
-                titleTextStyle: {
-                    color: 'white'
-                },
-                hAxis: {
-                    textStyle: {
-                        color: 'white'
-                    },
-                    titleTextStyle: {
-                        color: 'white'
-                    }
-                },
-                vAxis: {
-                    textStyle: {
-                        color: 'white'
-                    },
-                    titleTextStyle: {
-                        color: 'white'
-                    }
-                },
-                legend: {
-                    textStyle: {
-                        color: 'white'
-                    }
-                }
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-            chart.draw(data, options);
-        }
-    </script>
-
-
-
-
+    <script type="text/javascript" src="~/js/statistic.js"></script>
 
     <h2 class="display-4 mt-5 pt-5 mb-4">Statistik</h2>
     <p>Hier erhalten Sie einen Überlblick, welche Vokale wie häufig durch den Vokal "i" ersetzt wurden.</p>
     <div id="piechart" style="width: 100%; height: 500px;"></div>
-    
+
 }
 
 
 
-
-
-
-
-
-
 <!--Bootstrap Client Side Validation-->
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>
+<script type="text/javascript" src="~/js/validation.js"></script>
