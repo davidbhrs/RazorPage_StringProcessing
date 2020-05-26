@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace ASPdotNet_StringVerarbeitung.Pages
 {
@@ -25,12 +26,17 @@ namespace ASPdotNet_StringVerarbeitung.Pages
         public bool val = false;
         public bool activated = false;
         public bool started = false;
+        public List<string> historyEntry = new List<string>();
+        public static List<List<string>> history = new List<List<string>>();
+        public  List<List<string>> historyOutput = new List<List<string>>();
+
 
         string newString = "";
         char[] vokale = { 'a', 'e', 'i', 'o', 'u' };
         char newChar = ' ';
         string[] words = { };
         int wordNum = 0;
+
 
 
 
@@ -75,11 +81,10 @@ namespace ASPdotNet_StringVerarbeitung.Pages
                     }
                 }
             }
-
-            else
-            {
-                //newString = "Ihre Eingabe war ungültig.";
-            }
+            historyEntry.Add(inputString);
+            historyEntry.Add(newString);
+            history.Add(historyEntry);
+            historyOutput = history;
 
             ViewData["result"] = newString;
             return Page();
