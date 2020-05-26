@@ -10,18 +10,22 @@
     <p class="paragraph">
         Bitte geben Sie hier eine beliebige Zeichenkette ein. <br />
         <b>Hinweis: </b>Achten Sie darauf, dass die Zeichenkette <u>mindestens</u> aus 10 Wörtern besteht. <br />
+        Sie können die Anwendung jederzeit beenden indem Sie das Wort "exit" eingeben. <br />
         Viel Spaß mit der App :-)
     </p>
 
     <br />
     <br />
 
-    <form method="post" class="mb-5 pb-5">
+    <form method="post" class="mb-5 pb-5 needs-validation" novalidate>
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Zeichenkette</span>
             </div>
-            <textarea asp-for="inputString" placeholder="Zeichenkette eingeben" class="form-control shadow-lg rounded" aria-label="inputString" id="inputString"></textarea>
+            <textarea asp-for="inputString" placeholder="Zeichenkette eingeben" class="form-control shadow-lg" aria-label="inputString" id="inputString" required></textarea>
+            <div class="invalid-feedback">
+                Bitte geben Sie eine Zeichenkette ein. Sonst funktionert das Ganze nicht...
+            </div>
         </div>
         <br />
         <button type="submit" class="btn btn-outline-success ml-4 mr-4 w-25 mt-2 shadow-lg" asp-page-handler="Processing">Absenden</button>
@@ -85,3 +89,23 @@ else
 
 
 
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>

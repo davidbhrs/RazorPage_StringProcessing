@@ -38,9 +38,6 @@ h1 {
 
 
 /* Formatting */
-.validation {
-    /*color: red;*/
-}
 
 .paragraph {
     line-height: 2;
@@ -48,3 +45,5 @@ h1 {
 .myButton {
     width: 30px;
 }
+
+

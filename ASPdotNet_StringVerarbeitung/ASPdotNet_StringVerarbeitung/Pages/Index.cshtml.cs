@@ -56,18 +56,17 @@ namespace ASPdotNet_StringVerarbeitung.Pages
         {
             started = true;
             activated = true;
+
+            words = inputString.Split(" ");
+            if (words.Contains("exit"))
+            {
+                return RedirectToPage("/index");
+            }
+
             if (ModelState.IsValid)
             {
                 val = true;
-
-                words = inputString.Split(" ");
                 wordNum = words.Length;
-
-                if (words.Contains("exit"))
-                {
-                    return RedirectToPage("/index");
-                }
-
                 foreach (var character in inputString)
                 {
                     if (vokale.Contains(character))
@@ -89,5 +88,8 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             ViewData["result"] = newString;
             return Page();
         }
+
+
+
     }
 }
