@@ -29,13 +29,18 @@ namespace ASPdotNet_StringVerarbeitung.Pages
         public List<string> historyEntry = new List<string>();
         public static List<List<string>> history = new List<List<string>>();
         public  List<List<string>> historyOutput = new List<List<string>>();
-
+        public int aNum = 0;
+        public int eNum = 0;
+        public int iNum = 0;
+        public int oNum = 0;
+        public int uNum = 0;
 
         string newString = "";
-        char[] vokale = { 'a', 'e', 'i', 'o', 'u' };
+        char[] vokale = { 'a', 'e', 'o', 'u' };
         char newChar = ' ';
         string[] words = { };
         int wordNum = 0;
+        
 
 
 
@@ -65,6 +70,11 @@ namespace ASPdotNet_StringVerarbeitung.Pages
 
             if (ModelState.IsValid)
             {
+                aNum = inputString.Split('a').Length - 1;
+                eNum = inputString.Split('e').Length - 1;
+                oNum = inputString.Split('o').Length - 1;
+                uNum = inputString.Split('u').Length - 1;
+
                 val = true;
                 wordNum = words.Length;
                 foreach (var character in inputString)

@@ -5,10 +5,12 @@
 }
 
 
+
+
 @if (@Model.started)
 {
     <p class="paragraph">
-        Bitte geben Sie hier eine beliebige Zeichenkette ein. <br />
+        Bitte geben Sie hier eine beliebige Zeichenkette ein. In dieser werden dann alle Vokale durch "i" ersetzt. <br />
         <b>Hinweis: </b>Achten Sie darauf, dass die Zeichenkette <u>mindestens</u> aus 10 Wörtern besteht. <br />
         Sie können die Anwendung jederzeit beenden indem Sie das Wort "exit" eingeben. <br />
         Viel Spaß mit der App :-)
@@ -85,10 +87,94 @@ else
             }
         </table>
     </div>
+
+
+
+
+
+    <input type="hidden" value="@Model.aNum" id="aNum" />
+    <input type="hidden" value="@Model.eNum" id="eNum" />
+    <input type="hidden" value="@Model.iNum" id="iNum" />
+    <input type="hidden" value="@Model.oNum" id="oNum" />
+    <input type="hidden" value="@Model.uNum" id="uNum" />
+
+    <!--Google Charts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        a = Number(document.getElementById("aNum").value);
+        e = Number(document.getElementById("eNum").value);
+        o = Number(document.getElementById("oNum").value);
+        u = Number(document.getElementById("uNum").value);
+
+        console.log(a);
+
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Vokal', 'Änderungen'],
+                ['a', a],
+                ['e', e],
+                ['o', o],
+                ['u', u]
+            ]);
+
+            var options = {
+                title: 'Ersetzte Vokale',
+                backgroundColor: { fill: 'transparent' },
+                titleTextStyle: {
+                    color: 'white'
+                },
+                hAxis: {
+                    textStyle: {
+                        color: 'white'
+                    },
+                    titleTextStyle: {
+                        color: 'white'
+                    }
+                },
+                vAxis: {
+                    textStyle: {
+                        color: 'white'
+                    },
+                    titleTextStyle: {
+                        color: 'white'
+                    }
+                },
+                legend: {
+                    textStyle: {
+                        color: 'white'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+
+
+
+
+    <h2 class="display-4 mt-5 pt-5 mb-4">Statistik</h2>
+    <p>Hier erhalten Sie einen Überlblick, welche Vokale wie häufig durch den Vokal "i" ersetzt wurden.</p>
+    <div id="piechart" style="width: 100%; height: 500px;"></div>
+    
 }
 
 
 
+
+
+
+
+
+
+<!--Bootstrap Client Side Validation-->
 <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
