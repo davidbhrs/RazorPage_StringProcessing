@@ -99,7 +99,11 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             return Page();
         }
 
-
+        public IActionResult OnPostExitPage()
+        {
+            history = new List<List<string>>();
+            return RedirectToPage("/index");
+        }
 
     }
 }
