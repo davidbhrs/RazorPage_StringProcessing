@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.22)  27 MAY 2020 23:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.22)  28 MAY 2020 19:48
 entering extended mode
 **"./David Bährens - Portfolio - ASPdotNet.tex"
 ("David Bährens - Portfolio - ASPdotNet.tex"
@@ -101,6 +101,20 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 ("C:\Program Files\MiKTeX 2.9\tex/latex/setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks19
+\footnotemargin=\dimen144
+\c@pp@next@reset=\count180
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/sectsty\sectsty.sty"
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
@@ -118,12 +132,12 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box45
 \beforetitleunit=\skip49
 \aftertitleunit=\skip50
-\ttl@plus=\dimen144
-\ttl@minus=\dimen145
-\ttl@toksa=\toks19
-\titlewidth=\dimen146
-\titlewidthlast=\dimen147
-\titlewidthfirst=\dimen148
+\ttl@plus=\dimen145
+\ttl@minus=\dimen146
+\ttl@toksa=\toks20
+\titlewidth=\dimen147
+\titlewidthlast=\dimen148
+\titlewidthfirst=\dimen149
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -142,15 +156,15 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen149
-\Gin@req@width=\dimen150
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen151
-\WF@size=\dimen152
-\c@WF@wrappedlines=\count180
+\wrapoverhang=\dimen152
+\WF@size=\dimen153
+\c@WF@wrappedlines=\count181
 \WF@box=\box46
-\WF@everypar=\toks20
+\WF@everypar=\toks21
 Package: wrapfig 2003/01/31  v 3.6
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/acronym\acronym.sty"
@@ -161,12 +175,12 @@ Package: suffix 2006/07/15 1.5a Variant command support
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/xstring\xstring.sty"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/xstring\xstring.tex"
-\integerpart=\count181
-\decimalpart=\count182
+\integerpart=\count182
+\decimalpart=\count183
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
-\AC@clearlist=\toks21
+\AC@clearlist=\toks22
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip16
@@ -174,38 +188,132 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count183
+\etb@tempcnta=\count184
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/accsupp\accsupp.sty"
+Package: accsupp 2019/12/05 v0.6 Accessibility support by marked content (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pdfescape\pdfescape.sty"
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.sty"
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/infwarerr\infwarerr.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/kvoptions\kvoptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/accsupp\accsupp-pdftex.def"
+File: accsupp-pdftex.def 2019/12/05 v0.6 accsupp driver for pdfTeX (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+\lst@mode=\count185
+\lst@gtempboxa=\box47
+\lst@token=\toks23
+\lst@length=\count186
+\lst@currlwidth=\dimen154
+\lst@column=\count187
+\lst@pos=\count188
+\lst@lostspace=\dimen155
+\lst@width=\dimen156
+\lst@newlines=\count189
+\lst@lineno=\count190
+\lst@maxwidth=\dimen157
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count191
+\lst@skipnumbers=\count192
+\lst@framebox=\box48
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/dblfloatfix\dblfloatfix.sty"
+Package: dblfloatfix 2012/12/31 v1.0a (JAW)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\fixltx2e.sty"
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+)
+\@dblbotnum=\count193
+\c@dblbotnumber=\count194
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count184
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count195
+\l__pdf_internal_box=\box49
 )
 ("David Bährens - Portfolio - ASPdotNet.aux")
 \openout1 = `"David Bährens - Portfolio - ASPdotNet.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 93
-.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 22
+8.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 93.
+(Font)              scaled to size 11.39996pt on input line 228.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -243,61 +351,62 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count185
-\scratchdimen=\dimen153
-\scratchbox=\box48
-\nofMPsegments=\count186
-\nofMParguments=\count187
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count188
-\MPscratchDim=\dimen154
-\MPnumerator=\count189
-\makeMPintoPDFobject=\count190
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count196
+\scratchdimen=\dimen158
+\scratchbox=\box50
+\nofMPsegments=\count197
+\nofMParguments=\count198
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count199
+\MPscratchDim=\dimen159
+\MPnumerator=\count266
+\makeMPintoPDFobject=\count267
+\everyMPtoPDFconversion=\toks25
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
+\c@lstlisting=\count268
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 97.
+(Font)              scaled to size 11.39996pt on input line 232.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 97.
+(Font)              scaled to size 23.63593pt on input line 232.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 19.70294pt on input line 98.
+(Font)              scaled to size 19.70294pt on input line 233.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 99.
+(Font)              scaled to size 13.67995pt on input line 234.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 11.39996pt on input line 106.
+(Font)              scaled to size 11.39996pt on input line 241.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 19.70294pt on input line 106.
+(Font)              scaled to size 19.70294pt on input line 241.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
+Underfull \hbox (badness 10000) in paragraph at lines 244--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
+Underfull \hbox (badness 10000) in paragraph at lines 244--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 <img/datev.png, id=1, 488.82625pt x 481.8pt>
 File: img/datev.png Graphic file (type png)
 <use img/datev.png>
-Package pdftex.def Info: img/datev.png  used on input line 121.
+Package pdftex.def Info: img/datev.png  used on input line 256.
 (pdftex.def)             Requested size: 113.81102pt x 112.17172pt.
 <img/dhbw.png, id=3, 142.131pt x 65.043pt>
 File: img/dhbw.png Graphic file (type png)
 <use img/dhbw.png>
-Package pdftex.def Info: img/dhbw.png  used on input line 124.
+Package pdftex.def Info: img/dhbw.png  used on input line 259.
 (pdftex.def)             Requested size: 227.62204pt x 104.16916pt.
 
-Overfull \hbox (22.76402pt too wide) in paragraph at lines 124--125
+Overfull \hbox (22.76402pt too wide) in paragraph at lines 259--260
 [][] 
  []
 
@@ -306,9 +415,9 @@ Overfull \hbox (22.76402pt too wide) in paragraph at lines 124--125
 {C:/Users/David/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/datev
 .png> <./img/dhbw.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 133.
+(Font)              scaled to size 16.41594pt on input line 269.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 133.
+(Font)              scaled to size 16.41594pt on input line 269.
  ("David Bährens - Portfolio - ASPdotNet.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 7.
@@ -320,12 +429,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `"David Bährens - Portfolio - ASPdotNet.toc"'.
 
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 134.
 
 [2
 
-] [3
+]
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 11.39996pt on input line 293.
+ [3
 
 ] ("David Bährens - Portfolio - ASPdotNet.lof")
 \tf@lof=\write4
@@ -344,68 +454,118 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 182.
+(Font)              scaled to size 13.67995pt on input line 319.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 183.
+(Font)              scaled to size 7.59998pt on input line 320.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 183.
+(Font)              scaled to size 9.49997pt on input line 320.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 183.
+(Font)              <7> on input line 320.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 183.
+(Font)              <5> on input line 320.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 183.
+(Font)              scaled to size 6.64998pt on input line 320.
 <img/dotnet.jpg, id=27, 492.33937pt x 416.30531pt>
 File: img/dotnet.jpg Graphic file (type jpg)
 <use img/dotnet.jpg>
-Package pdftex.def Info: img/dotnet.jpg  used on input line 187.
+Package pdftex.def Info: img/dotnet.jpg  used on input line 324.
 (pdftex.def)             Requested size: 327.20668pt x 276.68709pt.
  [2
 
  <./img/dotnet.jpg>]
-[3] [4]
-<img/aufbau.jpg, id=38, 251.43938pt x 398.99063pt>
+[3]
+<img/aufbau.jpg, id=35, 251.43938pt x 398.99063pt>
 File: img/aufbau.jpg Graphic file (type jpg)
 <use img/aufbau.jpg>
-Package pdftex.def Info: img/aufbau.jpg  used on input line 209.
+Package pdftex.def Info: img/aufbau.jpg  used on input line 348.
 (pdftex.def)             Requested size: 199.16928pt x 316.04538pt.
-
-Underfull \hbox (badness 1552) in paragraph at lines 212--215
-\T1/phv/m/n/12 ver-schie-de-nen un-ter-schied-li-chen Da-tei-en
+ [4] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Underfull \hbox (badness 1028) in paragraph at lines 350--355
+\T1/phv/m/n/12 In ww-wroot be-fin-den sich sta-ti-sche Da-
  []
 
-[5
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+55.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 5.69998pt on input line 356.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 356.
+ [5 <./img/aufbau.jpg>] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlan
+g1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Overfull \hbox (7.05298pt too wide) in paragraph at lines 374--376
+\T1/phv/m/n/12 Au�erdem exis-tie-ren ver-schie-de-ne Tag-Helpers, al-so wie-der
+-ver-wend-ba-rer HTML-Code
+ []
 
- <./img/aufbau.jpg>] [6] [7
+[6]
+Overfull \hbox (18.64555pt too wide) in paragraph at lines 389--391
+\T1/cmtt/m/n/12 type=submit asp-page-handler=Processing>Submit</button> \T1
+/phv/m/n/12 aus-ge-f�hrt wer-
+ []
+
+<img/bootstrap_asp.jpg, id=48, 187.45032pt x 176.15813pt>
+File: img/bootstrap_asp.jpg Graphic file (type jpg)
+<use img/bootstrap_asp.jpg>
+Package pdftex.def Info: img/bootstrap_asp.jpg  used on input line 398.
+(pdftex.def)             Requested size: 156.49014pt x 147.07133pt.
+
+Underfull \hbox (badness 1168) in paragraph at lines 401--402
+\T1/phv/m/n/12 Um-set-zung ei-nes Re-spon-si-ve Web-Designs, mit
+ []
+
+[7 <./img/bootstrap_asp.jpg>] [8] [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
 \T1/phv/m/n/12 i c r o s o f t . c o m / d e -[] d e / x a m a r i n / x a m a 
 r in -[] f o r m s / e n t e r p r i se -[] a p p l i c a t i o n -[] p a t t e
  r n s / m v v m$
  []
 
-[8
+[10
 
-] [9
+]
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+
+ []
+
+
+Overfull \hbox (35.99998pt too wide) in paragraph at lines 463--468
+[][] 
+ []
+
+[11
 
 ] ("David Bährens - Portfolio - ASPdotNet.aux") ) 
 Here is how much of TeX's memory you used:
- 4262 strings out of 480799
- 58611 string characters out of 2905528
- 327656 words of memory out of 3000000
- 20187 multiletter control sequences out of 15000+200000
- 576815 words of font info for 59 fonts, out of 3000000 for 9000
+ 7223 strings out of 480799
+ 99770 string characters out of 2905528
+ 596241 words of memory out of 3000000
+ 23065 multiletter control sequences out of 15000+200000
+ 580646 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,28p,1421b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/
-fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvet
-ic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-
-Output written on "David Bährens - Portfolio - ASPdotNet.pdf" (14 pages, 16226
-8 bytes).
+ 38i,10n,67p,1818b,1653s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\David\AppData\Loca
+l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\David\Ap
+pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\User
+s\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk
+>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiK
+TeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/urw/helvetic/uhvr8a.pfb>
+Output written on "David Bährens - Portfolio - ASPdotNet.pdf" (16 pages, 22272
+7 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

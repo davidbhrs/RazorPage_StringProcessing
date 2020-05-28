@@ -7,8 +7,14 @@
 \contentsline {subsection}{\numberline {2.1}ASP.Net}{2}%
 \contentsline {subsection}{\numberline {2.2}Razor Pages}{4}%
 \contentsline {subsubsection}{\numberline {2.2.1}Allgemein}{4}%
-\contentsline {subsubsection}{\numberline {2.2.2}Aufbau einer Razor Page}{5}%
-\contentsline {subsection}{\numberline {2.3}Bootstrap}{6}%
-\contentsline {section}{\numberline {3}Praxisteil: Dokumentation der Webanwendung}{7}%
-\contentsline {section}{Literatur}{8}%
-\contentsline {section}{Selbstständigkeitserklärung}{9}%
+\contentsline {subsubsection}{\numberline {2.2.2}Aufbau eines Razor Page Projektes}{4}%
+\contentsline {subsubsection}{\numberline {2.2.3}Aufbau einer Razor Page}{6}%
+\contentsline {subsection}{\numberline {2.3}Bootstrap}{7}%
+\contentsline {section}{\numberline {3}Praxisteil}{9}%
+\contentsline {subsection}{\numberline {3.1}Anforderungsanalyse}{9}%
+\contentsline {subsection}{\numberline {3.2}Dokumentation}{9}%
+\contentsline {subsubsection}{\numberline {3.2.1}Grundfunktionalität}{9}%
+\contentsline {subsubsection}{\numberline {3.2.2}Erweiterungen}{9}%
+\contentsline {subsubsection}{\numberline {3.2.3}Graphische Gestaltung}{9}%
+\contentsline {section}{Literatur}{10}%
+\contentsline {section}{Selbstständigkeitserklärung}{11}%

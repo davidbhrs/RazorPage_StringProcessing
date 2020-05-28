@@ -63,6 +63,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             activated = true;
 
             words = inputString.Split(" ");
+            wordNum = words.Length;
             if (words.Contains("exit"))
             {
                 return RedirectToPage("/index");
@@ -96,6 +97,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             historyOutput = history;
 
             ViewData["result"] = newString;
+            ViewData["wordNum"] = wordNum;
             return Page();
         }
 

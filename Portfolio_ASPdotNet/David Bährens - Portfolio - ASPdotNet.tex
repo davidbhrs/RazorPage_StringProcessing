@@ -29,6 +29,7 @@ bottom=2cm]
 
 % Kopf- & Fußzeile
 %\usepackage{fancyhdr}
+\usepackage[bottom]{footmisc} % Fußzeile immer am Boden 
 
 % Schriftgröße & Abstände der Überschriften anpassen
 \usepackage{sectsty}
@@ -45,6 +46,23 @@ bottom=2cm]
 \usepackage[hyphens]{url}
 \usepackage{etoolbox}
 
+% Farben
+\usepackage{xcolor}
+
+% Upquote
+\usepackage{upquote}
+
+% 
+\usepackage{accsupp}
+
+% Code-Block
+\usepackage{listings}
+
+% Dinge am Boden ausrichten
+\usepackage{dblfloatfix}
+
+
+
 
 
 %%% Meta-Daten %%%
@@ -60,7 +78,6 @@ bottom=2cm]
 
 
 
-
 %%% Formatierung %%%
 \onehalfspacing
 
@@ -69,6 +86,13 @@ bottom=2cm]
 \appto\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
 	\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w
 	\do\x\do\y\do\z}
+
+% Codeblock - Zeilennummern nicht kopierbar
+\newcommand{\noncopynumber}[1]{%
+	\BeginAccSupp{method=escape,ActualText={}}%
+	#1%
+	\EndAccSupp{}%
+}
 
 
 
@@ -81,6 +105,117 @@ bottom=2cm]
 \makeatletter
 \renewcommand\@biblabel[1]{}
 \makeatother
+
+
+
+%%% Farben %%%
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\definecolor{mint}{rgb}{0.24, 0.71, 0.54}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+
+
+
+%%% Programmiersprachen %%%
+\lstdefinelanguage{HTML5}{
+	language=html,
+	sensitive=true, 
+	alsoletter={<>=-/:@{}},
+	keywords={ true, false, {{, }}, <h1>, </h1>, <form, <br>, <input, </form>, <p>, </p>, <h2>, </h2>, <p, <title>, </title>, <meta, >, <html, <head>, </head>, <body>, </body>, </html>, <span, </span>, <span> }
+	ndkeywords={
+		% General
+		=,
+		% HTML attributes
+		charset=, id=, width=, height=, src=, name=, content=, action=, method=, type=, style=, lang=, asp-for=, 
+		% CSS properties
+		border:, transform:, -moz-transform:, transition-duration:, transition-property:, transition-timing-function:,
+		%Vue.js
+		v-model=, @keyup=, @keydown=, v-on:click=, v-if=
+	},
+	morecomment=[s]{<!--}{-->},
+	tag=[s]
+}
+
+\lstdefinestyle{cshtml} {
+	% Basic design
+	backgroundcolor=\color{editorGray},
+	basicstyle={\footnotesize\ttfamily},
+	columns=fullflexible,   
+	frame=single,
+	rulecolor=\color{black},
+	% Line numbers
+	numbers=left,
+	stepnumber=1,
+	firstnumber=1,
+	numberfirstline=true,
+	numberstyle=\tiny\color{gray}\noncopynumber,
+	% Code design   
+	commentstyle=\color{mint}\ttfamily\textit,
+	ndkeywordstyle=\color{red}\bfseries,
+	keywordstyle=\color{blue}\bfseries,
+	stringstyle=\color{editorOcher},
+	% Code
+	language=HTML5,
+	%alsolanguage=JavaScript,
+	tabsize=4,
+	%alsodigit={.:;},
+	showspaces=false,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,        
+	% Support for German umlauts
+	literate=%
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+}
+
+\lstdefinestyle{csharp} {
+	% Basic design
+	backgroundcolor=\color{editorGray},
+	basicstyle={\footnotesize\ttfamily},
+	columns=fullflexible,   
+	frame=single,
+	rulecolor=\color{black},
+	% Line numbers
+	numbers=left,
+	stepnumber=1,
+	firstnumber=1,
+	numberfirstline=true,
+	numberstyle=\tiny\color{gray}\noncopynumber,
+	% Code design   
+	commentstyle=\color{mint}\ttfamily\textit,
+	ndkeywordstyle=\color{red}\bfseries,
+	keywordstyle=\color{blue}\bfseries,
+	stringstyle=\color{editorOcher},
+	% Code
+	language=[Sharp]C, 
+	%alsolanguage=JavaScript,
+	tabsize=4,
+	%alsodigit={.:;},
+	showspaces=false,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,        
+	% Support for German umlauts
+	literate=%
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+}
+
+
+\DeclareRobustCommand\squelch[1]{%
+	\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}
 
 
 
@@ -129,6 +264,7 @@ bottom=2cm]
 	
 	
 	
+	\thispagestyle{empty}
 	\setcounter{page}{2}
 	\tableofcontents
 	\clearpage
@@ -151,6 +287,7 @@ bottom=2cm]
 			\acro{ASP}{Active Server Pages}
 			\acro{REST}{Representational State Transfer}
 			\acro{MVC}{Model-View-Controller}
+			\acro{VS}{Visual Studio}
 		\end{acronym}
 	\end{singlespace}
 	\clearpage
@@ -180,7 +317,7 @@ bottom=2cm]
 	\section{Theoretische Grundlagen}
 	
 	\subsection{ASP.Net}
-	Bei ASP.Net handelt es sich um ein serverseitiges Web-Framework zur Entwicklung von dynamischen Web-Anwendungen. ASP steht für \glqq Acrive Server Pages\grqq. Dieses ist Teil des Microsoft (MS) Softwareentwicklungs und Execution-Framework .Net. .Net dient unter Windows zur Erstellung von Anwendungsprogrammen. Dessen wesentlichen beiden Bestandteile sind zum einen die Framework Class Library (FCL) und die Common Language Runtime (CLR). FCL ist eine umfangreiche Klassenbibliothek in .Net. Sie enthält beispielsweise User Interface (UI)-, File Access- oder Netzwerk-Kommunikationsklassen. Bei CLR handelt es sich um die Laufzeitumgebung in der .Net Anwendungen ausgeführt werden. .Net Programme, beispielsweise eine C\# Anwendung, greifen nicht direkt auf das Betriebssystem (OS) zu. Stattdessen wir der Programmcode in die sogenannte  MS Intermediate Language Assemby kompiliert und dann in der CLR ausgeführt. Die CLR wiederum greift dann direkt auf das darunterliegende OS zu (siehe Abb. \ref{fig:dotnet}).\footnote{Vgl. Beasley, Robert E., .Net Basics, 2020, S. 8}
+	Bei ASP.Net handelt es sich um ein modulares und serverseitiges Web-Framework zur Entwicklung von dynamischen Web-Anwendungen. ASP steht für \glqq Acrive Server Pages\grqq. Dieses ist Teil des Microsoft (MS) Softwareentwicklungs und Execution-Framework .Net. .Net dient unter Windows zur Erstellung von Anwendungsprogrammen. Dessen wesentlichen beiden Bestandteile sind zum einen die Framework Class Library (FCL) und die Common Language Runtime (CLR). FCL ist eine umfangreiche Klassenbibliothek in .Net. Sie enthält beispielsweise User Interface (UI)-, File Access- oder Netzwerk-Kommunikationsklassen. Bei CLR handelt es sich um die Laufzeitumgebung in der .Net Anwendungen ausgeführt werden. .Net Programme, beispielsweise eine C\# Anwendung, greifen nicht direkt auf das Betriebssystem (OS) zu. Stattdessen wir der Programmcode in die sogenannte  MS Intermediate Language Assemby kompiliert und dann in der CLR ausgeführt. Die CLR wiederum greift dann direkt auf das darunterliegende OS zu (siehe Abb. \ref{fig:dotnet}).\footnote{Vgl. Beasley, Robert E., .Net Basics, 2020, S. 8}
 	\begin{figure}[h]
 		\centering
 		\caption{.Net Framework}
@@ -196,29 +333,93 @@ bottom=2cm]
 	Zuletzt ist noch ASP.Net Web API zu nennen, mit dessen Hilfe Web-Schnittstellen wie z. B. REST entwickelt werden können.\footnote{Gutsch, Jürgen, ASP.Net, 2017} \sPar
 	Die .Net Entwicklung ist mit einer Reihe kompatibler Programmiersprachen möglich. Hierzu zählen beispielsweise Visual Basic, C\# oder F\#. Diese Arbeit bezieht sich im folgenden lediglich auf C\#. C\# ist eine objektorientierte und typsichere höhere Programmiersprache von MS. Ursprünglich war sie primär auf Windows ausgerichtet, inzwischen ist sie jedoch sehr universell und kann für die Entwicklung von Web-Apps eingesetzt werden.\footnote{Augsten, Stephan, C\#, 2019}
 	
+	
+	
 	\subsection{Razor Pages}
 	
 	\subsubsection{Allgemein}
-	Razor Pages basieren auf ASP.Net MVC und zeichnen sich durch die Razor Syntax aus. Mit dieser können statische HTML Webseiten mit C\# dynamisch gemacht werden. Dies zeichnet sich dadurch aus, dass eine Webseite durch eine .cshtml Datei erstellt wird, also eine Kombination aus C\#, mittels der Razor Syntax und HTML. Razor Pages vereinen die Vorteile einer verhältnismäßig einfachen Syntax mit einem leichtgewichtigen und dennoch mächtigen Framework. Anders als ASP.Net MVC nutzen Razor Pages das Model-View-ViewModel-Pattern statt echtem MVC. Hierbei handelt es sich um eine spezielle Form der MVC-Architektur, bei der kein Controller, sondern stattdessen ein ViewModel eingesetzt wird. Dieses ist eine spezielle Implementierung eines Controllers, welcher die Logik und Programmcode hinter einer View darstellt. Jede View hat ein eigenes ViewModel, statt einem zentralen Controller, der alle Views steuert. Model und View funktionieren analog zu ihrer Funktionalität bei MVC. Die View erhält ihre benötigten Daten dabei mittels Data Binding. Analog zu MVC ist der Zweck MVVM's die Trennung von Logik, UI und Daten. Diese erfolgt bei MVVM allerdings seitenbasiert.\footnote{o. V., MVVM, 2017} Nichts desto trotz kann auch in einer Razor Page mit der MVC-Architektur gearbeitet werden falls dies gewünscht wird. \footnote{o. V., Razor Pages, 2019}
-	\clearpage
+	Razor Pages basieren auf ASP.Net MVC und zeichnen sich durch die Razor Syntax aus. Mit dieser können statische HTML Webseiten mit C\# dynamisch gemacht werden. Dies zeichnet sich dadurch aus, dass eine Webseite durch eine .cshtml Datei erstellt wird, also eine Kombination aus C\#, mittels der Razor Syntax und HTML. Der dort enthaltene Code wird dabei serverseitig in reines HTML übersetzt. Razor Pages vereinen die Vorteile einer verhältnismäßig einfachen Syntax mit einem leichtgewichtigen und dennoch mächtigen Framework. Anders als ASP.Net MVC nutzen Razor Pages das Model-View-ViewModel-Pattern statt echtem MVC. Hierbei handelt es sich um eine spezielle Form der MVC-Architektur, bei der kein Controller, sondern stattdessen ein ViewModel, das bei Razor Pages PageModel genannt wird, eingesetzt wird. Dieses ist eine spezielle Implementierung eines Controllers, welcher die Logik und Programmcode hinter einer View darstellt. Jede View hat ein eigenes ViewModel, statt einem zentralen Controller, der alle Views steuert. Model und View funktionieren analog zu ihrer Funktionalität bei MVC. Die View erhält ihre benötigten Daten dabei mittels Data Binding. Analog zu MVC ist der Zweck MVVM's die Trennung von Logik, UI und Daten. Diese erfolgt bei MVVM allerdings seitenbasiert.\footnote{o. V., MVVM, 2017} Razor Pages sind automatisch auch bei einem ASP.Net MVC Projekt aktiviert und anders herum kann auch in einer Razor Page mit der MVC-Architektur gearbeitet werden falls dies gewünscht wird. \footnote{o. V., Razor Pages, 2019}
 	
-	\subsubsection{Aufbau einer Razor Page}
+	\subsubsection{Aufbau eines Razor Page Projektes}
+	Ein Standard Razor Projekt besteht aus verschiedenen unterschiedlichen Dateien (siehe Abb. \ref{fig:aufbau}). Die wohl wichtigsten befinden sich in dem \glqq Page\grqq~Ordner. Dieser enthält .cshtml Dateien und .cshtml.cs Dateien. Die .cshtml Dateien sind die Views bzw. die eigentliche Razor Page. Mit Hilfe der Razor Syntax könnte hierin auch Logik implementiert werden und somit jeglicher Quellcode in einer Datei gebündelt werden. Dies widerspricht allerdings dem Prinzip der Datentrennung bei MVVM und ist kein guter Programmierstil. Die .cshtml.cs dagegen sind die PageModels der Razor Page. Diese können sowohl die Datenstruktur, als auch die Logik beinhalten. Dies erkennt man im Übrigen auch aus der Abbildung \ref{fig:aufbau}, da hier offensichtlich kein separates Model implementiert wurde. Ein solches würde, falls benötigt, in einem separatem Model-Ordner, direkt unter dem Wurzelverzeichnis implementiert werden. Diese sind, genau wie die PageModels, C\# Dateien. PageModels vereinen damit eine breite Menge an Funktionalitäten, wie beispielsweise HTTPContext, den ModelState oder die Behandlung von Requests und Responses, wie z. b. HTTP-Anfragen, die in MVC getrennt würden.\footnote{Jones, Matthew, Razor vs. MVC, 2019} Der Startpunkt der Website bildet die Index.cshtml. Eine weitere wichtige Page-Datei ist die \_Layout.cshtml, welche ein Design-Template für jede andere Page darstellt. In ihr kann z. B. der Header der Website für alle Razor Pages festgelegt werden. Insgesamt erfüllen Pages mit einem \glqq\_\grqq~als Präfix jeweils eine besondere Aufgabe, sind allerdings nicht über einen URL-Aufruf erreichbar. Der Aufruf von \glqq https://Hostname/\_Layout\grqq~z. B. würde daher zu einem 404 Http Error führen.
 	\begin{wrapfigure}{r}{7cm}
 		\centering
 		\caption{Aufbau Razor Pages} 
 		\includegraphics[width=7cm]{img/aufbau.jpg} \\
 		\label{fig:aufbau}
 	\end{wrapfigure}
-	Ein Standard Razor Projekt besteht aus verschiedenen unterschiedlichen Dateien (siehe Abb. \ref{fig:aufbau}). Die wohl wichtigsten befinden sich in dem \glqq Page\grqq~Ordner. Dieser enthält .cshtml Dateien und .cshtml.cs Dateien, welche zusammen die eigentlichen Razor Pages darstellen. Die .cshtml Dateien sind die Views der Razor Page, allerdings könnte mit Hilfe der Razor Syntax auch Logik implementiert werden und somit jeglicher Quellcode in einer Datei gebündelt werden. Dies widerspricht allerdings dem Prinzip der Datentrennung bei MVVM und ist kein guter Programmierstil. Die .cshtml.cs dagegen sind die PageModels. Diese können sowohl die Datenstruktur, als auch die Logik beinhalten. Dies erkennt man im Übrigen auch aus der Abbildung \ref{fig:aufbau}, da hier offensichtlich kein separates Model implementiert wurde. Ein solches würde, falls benötigt, in einem separatem Model-Ordner, direkt unter dem Projekt implementiert werden. Diese sind, genau wie die PageModels, C\# Dateien. Der Startpunkt der Website bildet die Index.cshtml. Eine weitere wichtige Page-Datei ist die \_Layout.cshtml, welche ein Content Template für jede andere Page darstellt. In ihr kann z. B. der Header der Website für alle Razor Pages festgelegt werden. \\
-	Offensichtlich werden Razor Pages, anders als bei ASP.Net MVC, Dateien nach dem Zweck gegliedert. Es gibt nicht nur einen Controller der die gesamte Geschäftslogik in sich vereint, sondern stattdessen gibt es viele C\# Dateien, die das ViewModel bzw. auch PageModel genannt darstellen und jeweils einer View zugeordnet sind. \\
-	In wwwroot befinden sich statische Dateien, wie CSS-Style-Sheets, Bilder oder JavaScript(JS)-Dateien. Im lib Ordner wiederum befinden sich Drittanbieter-Pakete. Defaultmäßig sind dies JQuery und Bootstrap, was im Verlauf der Arbeit noch erläutert wird.
-		
+	Offensichtlich werden Razor Pages, anders als bei ASP.Net MVC, Dateien nach dem Zweck gegliedert. Es gibt nicht nur einen Controller der die gesamte Geschäftslogik in sich vereint, sondern stattdessen gibt es viele C\# Dateien, PageModel darstellen und jeweils einer View zugeordnet sind. \\
+	In wwwroot befinden sich statische Dateien, wie CSS-Style-Sheets, Bilder oder JavaScript(JS)-Dateien. Im lib Ordner wiederum befinden sich Drittanbieter-Pakete. Defaultmäßig sind dies JQuery und Bootstrap, was im Verlauf der Arbeit noch erläutert wird. \\
+	Darüber hinaus befinden sich direkt in dem Wurzelverzeichnis eine Konfigurationsdatei im JSON-Format für die gesamte Anwendung namens \glqq appsettings.json\grqq, eine \glqq Program.cs\grqq, die den Startpunkt der Anwendung darstellt und nach eine \glqq Startup.cs\grqq. In letzterer können z. B. benötigte Services hinzugefügt und weitere Konfigurationen vorgenommen werden.\footnote{o. V., Aufbau Razor Pages, 2020} Folgendes Beispiel zeigt, wie der Razor Page Service in eine ASP.Net Webanwendung integriert werden können:
+	\lstset{style=csharp}
+	\begin{lstlisting}
+ public void ConfigureServices(IServiceCollection services)
+{
+	services.AddRazorPages();
+}
+	\end{lstlisting}
+	
+	\subsubsection{Aufbau einer Razor Page}
+	Eine Razor Page zeichnet sich, wie bereits erwähnt, vor allem auch durch die Razor Syntax aus, die in den HTML-Code eingefügt wird. Der Server erkennt sie durch ein vorangestelltes \glqq @\grqq. So kann beispielsweise ganzer C\#-Code einfach in den HTML-Code eingefügt werden und ihn dadurch mit Funktinalität ausstatten. Dies geschieht innerhalb eines Codeblocks: \texttt{@\{ C\#-Code \}}. Darüber hinaus können auch einzelne Funktionen, wie eine if-Funktion, oder auch eine Schleife mit einem vorangestellten @ benutzt werden: \texttt{@if ( Condition ) \{ C\#-Code \}}. Es ist auch möglich von der View aus auf bestimmte Variablen des PageModels zuzugreifen. Dies geschieht über \texttt{@Model.variable}. Um auf diese Variable zugreifen zu können muss sie allerfings als Public deklariert werden. Eine weitere Möglichkeit, Daten vom PageModel an die View zurückzugeben ist ViewData, wobei es sich um ein dictionary verschiedener Objekte handelt. Dieses dictionary wird automatisch an die View übergeben. Somit kann jederzeit auf die darin enthaltenen Objekte, über den jeweiligen Key, zugegriffen werden. ViewData Attribute werden wie folgt im Page Model definiert und anschließend über \texttt{@ViewData["Key"]} aufgerufen.\footnote{o. V., ViewData, o. D.}
+	\lstset{style=csharp}
+	\begin{lstlisting}
+public class IndexModel : PageModel
+{
+	[ViewData]
+	public string Key { get; set; }
+	// Oder alternativ
+	ViewData["Key"] = "Value"
+}
+	\end{lstlisting}
+	Außerdem existieren verschiedene Tag-Helpers, also wiederverwendbarer HTML-Code für die Vereinfachung von ASP Funktionalitäten. Ein Beispiel hierfür wäre der Validation Message Tag Helper \texttt{asp-validation-for}, der einem span-Element eine Validation Error Message zuordnet, indem er ihm das HTML-Element \texttt{data-valmsg-for} zuweist. Bei einem Client seitigen Validationsfehler zeigt jQuery die Fehlermeldung innerhalb des spans. Der Tag kann allerdings auch für eine serverseitige Validation verwendet werden. Diese könnte beispielsweise so aussehen: 
+	\lstset{style=cshtml}
+	\begin{lstlisting}
+<input type="text" asp-for="IBAN" />
+<span asp-validation-for="IBAN"> </span>
+	\end{lstlisting}
+	\lstset{style=csharp}
+	\begin{lstlisting}
+public class IndexModel : PageModel
+{
+	[BindProperty]
+	[Required]
+	public string IBAN { get; set; }
+}
+	\end{lstlisting}
+	Wurde nun keine IBAN, bei einem Request an den Server, eingegeben wird unterhalb des Textfeldes eine Fehlermeldung ausgegeben. Ein weiteres Beispiel wäre der \texttt{asp-page-handler}, mit dem ein spezieller Page Handler ausgeführt werden kann. Bei Handler Methoden handelt es sich um Funktionen, die automatisch bei einem entsprechenden HTTP-Request ausgeführt werden. Die Handler Methode \texttt{OnGet()}~wird beispielsweise bei einer Get-Anfrage an den Server ausgeführt. Mit dem \texttt{asp-page-handler} können nun verschiedene Page Handler implementiert werden. So würde ein  \texttt{OnPostProcessing()}~Handler nur bei einem bestätigen von \texttt{<button type=\glqq submit\grqq~asp-page-handler=\glqq Processing\grqq>Submit</button>} ausgeführt werden.\footnote{o. V., Page Handler, 2018} \footnote{Anderson, Rick; Mullen, Taylor; Vicarel, Dan, Razor Syntax, 2020} \\
+	Jede Page beginnt stehts mit \texttt{@page} in der ersten Zeile. Hierdurch weiß ASP.Net, dass es diese datei wie eine Razor Page behandeln muss. Hierdurch kann die Page selber Aktionen ausführen und ist nicht auf einen Controller angewiesen. Des Weiteren muss ein \texttt{@model} angegeben werden, mit dem dazugehörigen Model dieser View. Bei Razor Pages ist dies in der Regel (i. d. R.) das PageModel.\footnote{Jones, Matthew, Razor vs. MVC, 2019}
+	
+	
+	
 	\subsection{Bootstrap}
+	 \begin{wrapfigure}{r}{5.5cm}
+	 	\centering
+	 	\caption{Bootstrap in Razor Page Projekt mit VS} 
+	 	\includegraphics[width=5.5cm]{img/bootstrap_asp.jpg} \\
+	 	\label{fig:bootstrap_asp}
+	 \end{wrapfigure}
+	Bei Bootstrap handelt es sich um ein Frontend-Framework zur optischen Gestaltung einer Website. Es dient primär der schnellen und einfachen Umsetzung eines Responsive Web-Designs, mit dem Websites für jede Displaygröße optimal gestaltet sein sollen. Damit verfolgt Bootstrap stark die Mobile-first Philosophie. Ursprünglich handelte es sich bei Bootstrap um eine Technologie von Twitter, die dann als Open-Source-Projekt veröffentlicht wurde. Wenn man sich seine Bestandteile anschaut, dann basiert es überwiegend auf CSS, aber auch auf HTML und JS. Seine Bestandteile sind zum einen das Design von Basis-HTML-Elementen und JS Plugins, welche zumeist auf jQuery basieren, bei dem es sich um eine freie JS-Bibliothek handelt. 
+	Darüber hinaus gibt es noch verschiedene Komponenten, bei denen es sich um von Bootstrap vordefinierte CSS-Klassen zur Gestaltung von HTML-Elementen handelt. Bootstrap ist zudem leicht anpassbar, sollten die vordefinierten Gestaltungsmöglichkeiten nicht den eigenen Wünschen entsprechen, wie wenn man beispielsweise ein neues Farblayout implementieren möchte.\footnote{Bhaumik, Snig, Bootstrap, 2015, S. 7-11} \sPar
+	Bootstrap eignet sich besonders gut für die ASP.Net Einbindung, denn bei der Erstellung eines Standard Razor Page Projektes mit Visual Studio (VS) ist Bootstrap bereits vorinstalliert und kann direkt verwendet werden (siehe Abb. \ref{fig:bootstrap_asp}).
 	\clearpage
 	
 	
 	
-	\section{Praxisteil: Dokumentation der Webanwendung}
+	
+	
+	\section{Praxisteil}
+	
+	\subsection{Anforderungsanalyse}
+	
+	
+	
+	\subsection{Dokumentation}
+	
+	\subsubsection{Grundfunktionalität}
+	
+	\subsubsection{Erweiterungen}
+	 
+	\subsubsection{Graphische Gestaltung}
 	\clearpage
 	
 	
@@ -238,13 +439,33 @@ bottom=2cm]
 		
 		\bibitem{MVVM} o. V., [MVVM] The Model-View-ViewModel Pattern, 07.08.2017, \url{https://docs.microsoft.com/de-de/xamarin/xamarin-forms/enterprise-application-patterns/mvvm} (26.05.2020)
 		
-		\bibitem{Razor Pages} o. V., [Razor Pages] Welcome To Learn Razor Pages \url{https://www.learnrazorpages.com/} (26.05.2020)
+		\bibitem{Razor Pages} o. V., [Razor Pages] Welcome To Learn Razor Pages, 08.05.2019, \url{https://www.learnrazorpages.com/} (26.05.2020)
+		
+		\bibitem{Aufbau Razor Pages} o. V. [Aufbau Razor Pages] First look at Razor Pages, 08.01.2020 \url{https://www.learnrazorpages.com/first-look} (26.05.2020)
+		
+		\bibitem{Razor vs. MVC} Jones, Matthew, [Razor vs. MVC] How Does Razor Pages Differ From MVC In ASP.NET Core?, 04.03.2019, \url{https://exceptionnotfound.net/razor-pages-how-does-it-differ-from-mvc-in-asp-net-core/} (26.05.2020)
+		
+		\bibitem{Razor Syntax} Anderson, Rick; Mullen, Taylor; Vicarel, Dan, [Razor Syntax] Razor syntax reference for ASP.NET Core, 12.02.2020, \url{https://docs.microsoft.com/de-de/aspnet/core/mvc/views/razor?view=aspnetcore-3.1} (26.05.2020)
+		
+		\bibitem{ViewData} o. V., [ViewData] Working With ViewData in Razor Pages, o. D., \url{https://www.learnrazorpages.com/razor-pages/viewdata} (26.05.2020)
+		
+		\bibitem{Page Handler} o. V., [Page Handler] Handler Methods in Razor Pages, 24.10.2018. \url{https://www.learnrazorpages.com/razor-pages/handler-methods} (26.05.2020)
 	\end{thebibliography}
 	\addcontentsline{toc}{section}{Literatur}
 	\clearpage
 	
 	
+	
 	\section*{Selbstständigkeitserklärung}
+	Ich versichere hiermit, dass ich die vorliegende Arbeit mit dem Thema: \glqq Portfolio Nr. 6 - Überprüfung und Verarbeitung eines String mit ASP.Net\grqq~selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.\\
+	
+	\begin{table}[b]
+		\begin{tabular}{p{0.5\textwidth} p{0.05\textwidth} p{0.45\textwidth}}
+			\textbf{Ort, Datum} & & \textbf{Unterschrift} \\
+			& & \\
+			Nürnberg, den 30.05.2020 & & 
+		\end{tabular}
+	\end{table}
 	\addcontentsline{toc}{section}{Selbstständigkeitserklärung}
 	
 \end{document}
