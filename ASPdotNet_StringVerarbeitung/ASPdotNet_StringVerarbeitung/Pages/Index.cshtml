@@ -6,7 +6,7 @@
 
 
 
-
+<!--Wurde die Anwendung über den Startbutton gestartet, wird die eigentliche Anwendung angezeigt-->
 @if (@Model.started)
 {
     <p class="paragraph">
@@ -40,7 +40,7 @@
 
     <br />
 
-    @if (@Model.val)
+    @if (@ModelState.IsValid)
     {
         <div class="jumbotron jumbotron-fluid bg-success my-auto shadow-lg rounded p-4 mt-5 pt-5" id="jumbo">
             <h2 class="display-4 text-light mt-4 mb-4 text-left"> Überarbeitete Zeichenkette </h2>
@@ -49,7 +49,7 @@
             </div>
         </div>
     }
-    else if (!@Model.val && @Model.activated)
+    else if (!@ModelState.IsValid && @Model.activated)
     {
         <div class="jumbotron jumbotron-fluid bg-danger my-auto shadow-lg rounded p-4 text-light">
             <h2 class="display-4 mt-4 mb-4 text-left"> Überarbeitete Zeichenkette </h2>
@@ -59,6 +59,7 @@
         </div>
     }
 }
+// Defaultmäßig wird erst mal die folgende Startseite angezeigt
 else
 {
     <form method="post">

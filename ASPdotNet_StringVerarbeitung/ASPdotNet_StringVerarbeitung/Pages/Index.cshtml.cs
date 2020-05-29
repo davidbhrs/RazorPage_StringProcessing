@@ -23,12 +23,9 @@ namespace ASPdotNet_StringVerarbeitung.Pages
         [Required(ErrorMessage = "Sie haben keine Zeichenkette eingegeben")]
         [RegularExpression(@"(.*\s){9}..*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
         public string inputString { get; set; }
-        public bool val = false;
         public bool activated = false;
-        public bool started = false;
-        public List<string> historyEntry = new List<string>();
-        public static List<List<string>> history = new List<List<string>>();
-        public  List<List<string>> historyOutput = new List<List<string>>();
+        public bool started = false; // Startvariable, um die eigentliche Anwendung anzuzeigen
+        public List<List<string>> historyOutput = new List<List<string>>();
         public int aNum = 0;
         public int eNum = 0;
         public int iNum = 0;
@@ -40,9 +37,10 @@ namespace ASPdotNet_StringVerarbeitung.Pages
         char newChar = ' ';
         string[] words = { };
         int wordNum = 0;
+        List<string> historyEntry = new List<string>();
+        static List<List<string>> history = new List<List<string>>();
+
         
-
-
 
 
         /* Methoden */
@@ -62,10 +60,13 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             started = true;
             activated = true;
 
+            inputString = inputString.ToLower();
+
             words = inputString.Split(" ");
             wordNum = words.Length;
             if (words.Contains("exit"))
             {
+                history = new List<List<string>>();
                 return RedirectToPage("/index");
             }
 
@@ -76,7 +77,6 @@ namespace ASPdotNet_StringVerarbeitung.Pages
                 oNum = inputString.Split('o').Length - 1;
                 uNum = inputString.Split('u').Length - 1;
 
-                val = true;
                 wordNum = words.Length;
                 foreach (var character in inputString)
                 {

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.22)  28 MAY 2020 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.22)  29 MAY 2020 19:42
 entering extended mode
 **"./David Bährens - Portfolio - ASPdotNet.tex"
 ("David Bährens - Portfolio - ASPdotNet.tex"
@@ -434,7 +434,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 293.
+(Font)              scaled to size 11.39996pt on input line 296.
  [3
 
 ] ("David Bährens - Portfolio - ASPdotNet.lof")
@@ -443,58 +443,50 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 
  [4
 
-]
-("David Bährens - Portfolio - ASPdotNet.lot")
-\tf@lot=\write5
-\openout5 = `"David Bährens - Portfolio - ASPdotNet.lot"'.
-
- [5
-
 ] [1
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 319.
+(Font)              scaled to size 13.67995pt on input line 316.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 320.
+(Font)              scaled to size 7.59998pt on input line 317.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 320.
+(Font)              scaled to size 9.49997pt on input line 317.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 320.
+(Font)              <7> on input line 317.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 320.
+(Font)              <5> on input line 317.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 320.
-<img/dotnet.jpg, id=27, 492.33937pt x 416.30531pt>
+(Font)              scaled to size 6.64998pt on input line 317.
+<img/dotnet.jpg, id=24, 492.33937pt x 416.30531pt>
 File: img/dotnet.jpg Graphic file (type jpg)
 <use img/dotnet.jpg>
-Package pdftex.def Info: img/dotnet.jpg  used on input line 324.
+Package pdftex.def Info: img/dotnet.jpg  used on input line 321.
 (pdftex.def)             Requested size: 327.20668pt x 276.68709pt.
  [2
 
- <./img/dotnet.jpg>]
-[3]
-<img/aufbau.jpg, id=35, 251.43938pt x 398.99063pt>
+ <./img/dotnet.jpg>] [3]
+<img/aufbau.jpg, id=32, 251.43938pt x 398.99063pt>
 File: img/aufbau.jpg Graphic file (type jpg)
 <use img/aufbau.jpg>
-Package pdftex.def Info: img/aufbau.jpg  used on input line 348.
+Package pdftex.def Info: img/aufbau.jpg  used on input line 344.
 (pdftex.def)             Requested size: 199.16928pt x 316.04538pt.
  [4] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Underfull \hbox (badness 1028) in paragraph at lines 350--355
+Underfull \hbox (badness 1028) in paragraph at lines 346--351
 \T1/phv/m/n/12 In ww-wroot be-fin-den sich sta-ti-sche Da-
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-55.
+51.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 356.
+(Font)              scaled to size 5.69998pt on input line 352.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 356.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 352.
  [5 <./img/aufbau.jpg>] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlan
 g1.sty"
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -502,70 +494,100 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-Overfull \hbox (7.05298pt too wide) in paragraph at lines 374--376
+Overfull \hbox (7.05298pt too wide) in paragraph at lines 370--372
 \T1/phv/m/n/12 Au�erdem exis-tie-ren ver-schie-de-ne Tag-Helpers, al-so wie-der
 -ver-wend-ba-rer HTML-Code
  []
 
-[6]
-Overfull \hbox (18.64555pt too wide) in paragraph at lines 389--391
+
+Overfull \hbox (18.64555pt too wide) in paragraph at lines 385--387
 \T1/cmtt/m/n/12 type=submit asp-page-handler=Processing>Submit</button> \T1
 /phv/m/n/12 aus-ge-f�hrt wer-
  []
 
-<img/bootstrap_asp.jpg, id=48, 187.45032pt x 176.15813pt>
+[6]
+<img/bootstrap_asp.jpg, id=45, 187.45032pt x 176.15813pt>
 File: img/bootstrap_asp.jpg Graphic file (type jpg)
 <use img/bootstrap_asp.jpg>
-Package pdftex.def Info: img/bootstrap_asp.jpg  used on input line 398.
+Package pdftex.def Info: img/bootstrap_asp.jpg  used on input line 394.
 (pdftex.def)             Requested size: 156.49014pt x 147.07133pt.
 
-Underfull \hbox (badness 1168) in paragraph at lines 401--402
+Underfull \hbox (badness 1168) in paragraph at lines 397--398
 \T1/phv/m/n/12 Um-set-zung ei-nes Re-spon-si-ve Web-Designs, mit
  []
 
 [7 <./img/bootstrap_asp.jpg>] [8] [9
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+] [10]
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+468.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [11]
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
+
+ []
+
+[12]
+Overfull \hbox (7.97346pt too wide) in paragraph at lines 521--523
+\T1/phv/m/n/12 Va-ria-ble \T1/cmtt/m/n/12 inputString\T1/phv/m/n/12 , al-so die
+ ein-ge-ge-be-ne Zei-chen-ket-te und die Va-ria-ble \T1/cmtt/m/n/12 newString\T
+1/phv/m/n/12 ,
+ []
+
+[13] [14] [15
+
+] [16
+
+] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
 \T1/phv/m/n/12 i c r o s o f t . c o m / d e -[] d e / x a m a r i n / x a m a 
 r in -[] f o r m s / e n t e r p r i se -[] a p p l i c a t i o n -[] p a t t e
  r n s / m v v m$
  []
 
-[10
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 698--699
+[]\T1/phv/m/n/12 o. V., [Boot-strap Va-li-da-ti-on] Forms, o. D., htt-
+ []
+
+[18
+
+] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
 
  []
 
 
-Overfull \hbox (35.99998pt too wide) in paragraph at lines 463--468
+Overfull \hbox (35.99998pt too wide) in paragraph at lines 709--714
 [][] 
  []
 
-[11
+[20
 
 ] ("David Bährens - Portfolio - ASPdotNet.aux") ) 
 Here is how much of TeX's memory you used:
- 7223 strings out of 480799
- 99770 string characters out of 2905528
- 596241 words of memory out of 3000000
- 23065 multiletter control sequences out of 15000+200000
- 580646 words of font info for 64 fonts, out of 3000000 for 9000
+ 7412 strings out of 480799
+ 102198 string characters out of 2905528
+ 661496 words of memory out of 3000000
+ 23252 multiletter control sequences out of 15000+200000
+ 581241 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,67p,1818b,1653s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,67p,1795b,1647s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\David\AppData\Loca
-l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\David\Ap
-pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\User
-s\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk
->{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiK
-TeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/urw/helvetic/uhvr8a.pfb>
-Output written on "David Bährens - Portfolio - ASPdotNet.pdf" (16 pages, 22272
-7 bytes).
+l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcit1000.pk> <C:\Users\David\Ap
+pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\User
+s\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk
+> <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
+ctt1200.pk> <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
+c/dpi600\ectt1000.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on "David Bährens - Portfolio - ASPdotNet.pdf" (24 pages, 27276
+2 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
+ 293 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
