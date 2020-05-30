@@ -1,18 +1,19 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{Abkürzungsverzeichnis}{III}%
 \contentsline {section}{Abbildungsverzeichnis}{IV}%
-\contentsline {section}{\numberline {1}Einleitung}{1}%
-\contentsline {section}{\numberline {2}Theoretische Grundlagen}{2}%
-\contentsline {subsection}{\numberline {2.1}ASP.Net}{2}%
-\contentsline {subsection}{\numberline {2.2}Razor Pages}{3}%
-\contentsline {subsubsection}{\numberline {2.2.1}Aufbau eines Razor Page Projektes}{4}%
-\contentsline {subsubsection}{\numberline {2.2.2}Aufbau einer Razor Page}{5}%
-\contentsline {subsection}{\numberline {2.3}Bootstrap}{7}%
-\contentsline {section}{\numberline {3}Praxisteil: Dokumentation und erklärung des Codes}{9}%
-\contentsline {subsection}{\numberline {3.1}Grundfunktionalität}{9}%
-\contentsline {subsection}{\numberline {3.2}Erweiterungen}{12}%
-\contentsline {subsubsection}{\numberline {3.2.1}Historie}{13}%
-\contentsline {subsubsection}{\numberline {3.2.2}Statistik}{14}%
-\contentsline {subsection}{\numberline {3.3}Graphische Gestaltung}{14}%
-\contentsline {section}{Literatur}{22}%
-\contentsline {section}{Selbstständigkeitserklärung}{23}%
+\contentsline {section}{\numberline {1}Theoretische Grundlagen}{1}%
+\contentsline {subsection}{\numberline {1.1}ASP.Net}{1}%
+\contentsline {subsection}{\numberline {1.2}Razor Pages}{2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Aufbau eines Razor Page Projektes}{3}%
+\contentsline {subsubsection}{\numberline {1.2.2}Aufbau einer Razor Page}{4}%
+\contentsline {subsection}{\numberline {1.3}Bootstrap}{6}%
+\contentsline {section}{\numberline {2}Praxisteil: Dokumentation und erklärung des Codes}{8}%
+\contentsline {subsection}{\numberline {2.1}Grundfunktionalität}{8}%
+\contentsline {subsection}{\numberline {2.2}Erweiterungen}{11}%
+\contentsline {subsubsection}{\numberline {2.2.1}Historie}{12}%
+\contentsline {subsubsection}{\numberline {2.2.2}Statistik}{13}%
+\contentsline {subsection}{\numberline {2.3}Graphische Gestaltung}{13}%
+\contentsline {section}{Anhang 1: Clientseitige Validierung}{17}%
+\contentsline {section}{Anhang 2: Google Chart}{19}%
+\contentsline {section}{Literatur}{21}%
+\contentsline {section}{Selbstständigkeitserklärung}{22}%

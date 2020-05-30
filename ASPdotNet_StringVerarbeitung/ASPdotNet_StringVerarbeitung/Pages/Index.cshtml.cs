@@ -21,7 +21,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Sie haben keine Zeichenkette eingegeben")]
-        [RegularExpression(@"(.*\s){9}..*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
+        [RegularExpression(@"(\w+\s){9}..*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
         public string inputString { get; set; }
         public bool activated = false;
         public bool started = false; // Startvariable, um die eigentliche Anwendung anzuzeigen
@@ -60,10 +60,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             started = true;
             activated = true;
 
-            inputString = inputString.ToLower();
-
-            words = inputString.Split(" ");
-            wordNum = words.Length;
+            
             if (words.Contains("exit"))
             {
                 history = new List<List<string>>();
@@ -72,6 +69,11 @@ namespace ASPdotNet_StringVerarbeitung.Pages
 
             if (ModelState.IsValid)
             {
+                inputString = inputString.ToLower();
+
+                words = inputString.Split(" ");
+                wordNum = words.Length;
+
                 aNum = inputString.Split('a').Length - 1;
                 eNum = inputString.Split('e').Length - 1;
                 oNum = inputString.Split('o').Length - 1;
