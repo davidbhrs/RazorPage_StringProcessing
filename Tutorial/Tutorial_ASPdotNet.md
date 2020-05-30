@@ -1,6 +1,6 @@
 # Tutorial ASP.Net
 
-In diesem Tutorial wird erläutert wie eine Razor Page erstellt wird, auf der ein User eine beliebige Zeichenkette mit mindestens zehn Wörtern eingeben kann, dessen Vokale dann vollständig mit dem Buchstaben "i" ersetzt werden. Zusätzlich soll eine Historie implementiert werden, aus der ersichtlich wird, welche Input-Strings bereits eingegeben wurden und welcher Output-String hieraus generiert wurde.
+In diesem Tutorial wird erläutert wie eine Razor Page erstellt wird, auf der ein Benutzer eine beliebige Zeichenkette mit mindestens zehn Wörtern eingeben kann, dessen Vokale dann vollständig mit dem Buchstaben "i" ersetzt werden. Zusätzlich soll eine Historie implementiert werden, aus der ersichtlich wird, welche Input-Strings bereits eingegeben wurden und welcher Output-String hieraus generiert wurde.
 
 
 
@@ -12,7 +12,7 @@ Eine einfachere und schnellere Alternative, zu der Erstellung einer Razor Page �
 
 ### Erstellung des Input-Formulars
 
-Als erstes muss auf der Page (.cshtml) ein Formular erstellt werden. Dieses soll aus einer textarea bestehen, in die die Zeichenkette eingegeben werden kann und einem submit-button. Die textarea muss mit dem Tag Helper "asp-for" ausgestattet werden. Hierdurch kann der eingegebene String später an das Page Model (.cshtml.cs) gebunden werden und dort auf die Eingabe zugegriffen werden. Außerdem kann ein Tag Helper "asp-page-handler" hinzugefügt werden. Hierdurch kann ein Page Handler verwendet werden, um mehrere POST-Methoden auf einer Seite realisieren zu können. Die Verwendung eines Page Handlers wird im weiteren Verlauf des Tutorials erläutert.
+Als erstes muss auf der Page (.cshtml) ein Formular erstellt werden. Dieses soll aus einer textarea bestehen, in die die Zeichenkette eingegeben werden kann und einem submit-button. Die textarea muss mit dem Tag Helper "asp-for" ausgestattet werden. Hierdurch kann die eingegebene Zeichenkette später an das Page Model (.cshtml.cs) gebunden werden und dort auf die Eingabe zugegriffen werden. Außerdem kann ein Tag Helper "asp-page-handler" hinzugefügt werden. Hierdurch kann ein Page Handler verwendet werden, um mehrere POST-Methoden auf einer Seite realisieren zu können. Die Verwendung eines Page Handlers wird im weiteren Verlauf des Tutorials erläutert.
 
 ```html
 <form method="post">
@@ -35,7 +35,11 @@ public class MainModel : PageModel
 
 ### Validierung der Eingabe 
 
+<<<<<<< HEAD
 Nun muss überprüft werden, ob mindestens zehn Wörter eingegeben wurden, bzw. ob überhaupt eine Eingabe erfolgte. Dies vereinfacht ASP.Net, sobald der benötigte namespace geladen wurde. Die Überprüfung, ob ein Wert eingegeben wurde erfolgt einfach über das Hinzufügen von "[Required]". Für eine individuelle Fehlermeldung kann in Klammern dahinter "ErrorMessage=*" eingegeben werden. Für die Überprüfung auf die Anzahl der Wörter können RegEx mit dem Ausdruck "[RegularExpressions]" verwendet werden.  Eine RegEx zur Überprüfung von mindestens zehn Wörtern könnte lauten "\s*(\w+\s+){9}\w.\*".  "\w+\s" steht dabei für mindestens einen Buchstaben gefolgt von mindestens einem Leerzeichen. Diese Kombination muss mindestens neun mal auftreten. Danach muss noch mindestens einmal ein Buchstabe auftauchen.
+=======
+Nun muss überprüft werden, ob mindestens zehn Wörter eingegeben wurden, bzw. ob überhaupt eine Eingabe erfolgte. Dies vereinfacht ASP.Net, sobald der benötigte namespace geladen wurde. Die Überprüfung, ob ein Wert eingegeben wurde erfolgt einfach über das Hinzufügen von "[Required]". Für eine individuelle Fehlermeldung kann in Klammern dahinter eine "ErrorMessage" eingegeben werden. Für die Überprüfung auf die Anzahl der Wörter können RegEx mit dem Ausdruck "[RegularExpressions]" verwendet werden.  Eine RegEx zur Überprüfung von mindestens zehn Wörtern könnte lauten "(\w+\s+){9}\w.\*".  "\w+\s" steht dabei für mindestens einen Buchstaben gefolgt von mindestens einem Leerzeichen. Diese Kombination muss mindestens neun mal auftreten. Danach muss noch mindestens einmal ein Buchstabe auftauchen.
+>>>>>>> d86987bd8f465929ac87ad5ee95bef807e05c33d
 
 ```c#
 using System.ComponentModel.DataAnnotations; // benötigter namespace
@@ -46,7 +50,7 @@ using System.ComponentModel.DataAnnotations; // benötigter namespace
 public string inputString { get; set; }
 ```
 
-Wenn keine Zeichenkette eingegeben wurde, oder die eingegebene nicht mit der RegEx übereinstimmt wird die Fehlermeldung in der View (.cshtml) in einem span mit dem Tag helper "asp-validation-for" ausgegeben:
+Wenn keine Zeichenkette eingegeben wurde, oder die eingegebene nicht mit der RegEx übereinstimmt wird die Fehlermeldung in der View (.cshtml) in einem span mit dem Tag Helper "asp-validation-for" ausgegeben:
 
 ```html
 <span asp-validation-for="inputString"></span>
@@ -56,7 +60,7 @@ Wenn keine Zeichenkette eingegeben wurde, oder die eingegebene nicht mit der Reg
 
 ### Verarbeitung des Strings
 
-Die Verarbeitung erfolgt ausschließlich im Page Model. Bei einem submit des Formulares wir eine POST-Anfrage gestellt. Da ein Page Handler implementiert wurde, erfolgt die Verarbeitung in der Handler Methode OnPostProcessing(). Diese wird bei jedem submit des HTML-Formulars ausgeführt. Zunächst muss überprüft werden, ob die Validierung positiv war, was durch "ModelState.IsValid" erfolgt. Hiernach kann über jeden Buchstaben des eingegebenen Strings iteriert werden und überprüft werden, ob ein Vokal vorkommt. Hierzu kann z. B. ein neue Variable angelegt werden, der alle Konsonanten hinzugefügt werden und falls ein Vokal gefunden wird, ein "i" hinzugefügt wird. Diese Variable kann als ViewData implementiert werden, um sie später für die View zugänglich zu machen. 
+Die Verarbeitung erfolgt ausschließlich im Page Model. Bei dem Bestätigen des Formulars wir eine POST-Anfrage gestellt. Da ein Page Handler implementiert wurde, erfolgt die Verarbeitung in der Handler Methode OnPostProcessing(). Diese wird bei jeder Bestätigung des HTML-Formulars ausgeführt. Zunächst muss überprüft werden, ob die Validierung positiv war, was durch "ModelState.IsValid" erfolgt. Hiernach kann über jeden Buchstaben der eingegebenen Zeichenkette iteriert und überprüft werden, ob ein Vokal vorkommt. Hierzu kann z. B. ein neue Variable angelegt werden, der alle Konsonanten hinzugefügt werden und falls ein Vokal gefunden wird, ein "i" hinzugefügt wird. Diese Variable kann als ViewData implementiert werden, um sie später für die View zugänglich zu machen. 
 
 ```c#
 [ViewData]
@@ -123,13 +127,13 @@ public IActionResult OnPostProcessing()
 }
 ```
 
-Sinnvoll wäre noch ein Button, der auf die Index Seite zurückführt und die Historie danach löscht, damit die Anwendung als beendet angesehen werden kann. Hierzu wird in der View ein Exit-Button mit einem weiteren Page Handler angelegt.
+Sinnvoll wäre noch eine Schaltfläche, die auf die Indexseite zurückführt und die Historie danach löscht, damit die Anwendung als beendet angesehen werden kann. Hierzu wird in der View ein Exit-Button mit einem weiteren Page Handler angelegt.
 
 ```html
 <button type="submit" asp-page-handler="ExitPage">Exit</button>
 ```
 
-In einer weiteren Handler Methode in dem Page Model wird die Historie nun bereinigt und die Index-Seite zurückgegeben.
+In einer weiteren Handler Methode in dem Page Model wird die Historie nun bereinigt und die Indexseite zurückgegeben.
 
 ```c#
 public IActionResult OnPostExitPage()
