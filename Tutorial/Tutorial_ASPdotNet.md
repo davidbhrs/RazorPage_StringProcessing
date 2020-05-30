@@ -35,18 +35,14 @@ public class MainModel : PageModel
 
 ### Validierung der Eingabe 
 
-<<<<<<< HEAD
-Nun muss überprüft werden, ob mindestens zehn Wörter eingegeben wurden, bzw. ob überhaupt eine Eingabe erfolgte. Dies vereinfacht ASP.Net, sobald der benötigte namespace geladen wurde. Die Überprüfung, ob ein Wert eingegeben wurde erfolgt einfach über das Hinzufügen von "[Required]". Für eine individuelle Fehlermeldung kann in Klammern dahinter "ErrorMessage=*" eingegeben werden. Für die Überprüfung auf die Anzahl der Wörter können RegEx mit dem Ausdruck "[RegularExpressions]" verwendet werden.  Eine RegEx zur Überprüfung von mindestens zehn Wörtern könnte lauten "\s*(\w+\s+){9}\w.\*".  "\w+\s" steht dabei für mindestens einen Buchstaben gefolgt von mindestens einem Leerzeichen. Diese Kombination muss mindestens neun mal auftreten. Danach muss noch mindestens einmal ein Buchstabe auftauchen.
-=======
 Nun muss überprüft werden, ob mindestens zehn Wörter eingegeben wurden, bzw. ob überhaupt eine Eingabe erfolgte. Dies vereinfacht ASP.Net, sobald der benötigte namespace geladen wurde. Die Überprüfung, ob ein Wert eingegeben wurde erfolgt einfach über das Hinzufügen von "[Required]". Für eine individuelle Fehlermeldung kann in Klammern dahinter eine "ErrorMessage" eingegeben werden. Für die Überprüfung auf die Anzahl der Wörter können RegEx mit dem Ausdruck "[RegularExpressions]" verwendet werden.  Eine RegEx zur Überprüfung von mindestens zehn Wörtern könnte lauten "(\w+\s+){9}\w.\*".  "\w+\s" steht dabei für mindestens einen Buchstaben gefolgt von mindestens einem Leerzeichen. Diese Kombination muss mindestens neun mal auftreten. Danach muss noch mindestens einmal ein Buchstabe auftauchen.
->>>>>>> d86987bd8f465929ac87ad5ee95bef807e05c33d
 
 ```c#
 using System.ComponentModel.DataAnnotations; // benötigter namespace
 
 [BindProperty]
 [Required(ErrorMessage = "Sie haben keine Zeichenkette eingegeben")]
-[RegularExpression(@"\s*(\w+\s+){9}\w.*", ErrorMessage = " Sie haben zu wenig Wörter eingegeben.")]
+[RegularExpression(@"(\w+\s){9}..*", ErrorMessage = " Sie haben zu wenig Wörter eingegeben.")]
 public string inputString { get; set; }
 ```
 
