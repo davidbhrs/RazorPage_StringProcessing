@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations; // namespace for validation
 using Microsoft.AspNetCore.Http;
 
 namespace ASPdotNet_StringVerarbeitung.Pages
@@ -19,35 +19,37 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             _logger = logger;
         }
 
+
+        /*
+         *  Variablen 
+         */
+         // public Variablen auf die von der View aus zugegriffen wird
         [BindProperty]
         [Required(ErrorMessage = "Sie haben keine Zeichenkette eingegeben")]
-        [RegularExpression(@"(\w+\s){9}..*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
-        public string inputString { get; set; }
-        public bool activated = false;
+        [RegularExpression(@"\s*(\w+\s+){9}\w.*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
+        public string inputString { get; set; } // eingegebene Zeichenkette
+        public bool activated = false; // Variable, ob die Anwendung schon einmal ausgeführt wurde oder nicht
         public bool started = false; // Startvariable, um die eigentliche Anwendung anzuzeigen
-        public List<List<string>> historyOutput = new List<List<string>>();
+        public List<List<string>> historyOutput = new List<List<string>>(); // Output der Historie
+        // Anzahl der ersetzten Vokale
         public int aNum = 0;
         public int eNum = 0;
         public int iNum = 0;
         public int oNum = 0;
         public int uNum = 0;
+        [ViewData]
+        public string newString { get; set; }
+        [ViewData]
+        public int wordNum { get; set; }
 
-        string newString = "";
-        char[] vokale = { 'a', 'e', 'o', 'u' };
-        char newChar = ' ';
+        // Variablen die nur im Page Modell existieren
+        char[] vokale = { 'a', 'e', 'o', 'u' }; 
         string[] words = { };
-        int wordNum = 0;
         List<string> historyEntry = new List<string>();
+        // Historie als statische Variable, damit sie auch nach einem POST beständig ist
         static List<List<string>> history = new List<List<string>>();
 
-        
 
-
-        /* Methoden */
-        public void OnGet()
-        {
-
-        }
 
         public IActionResult OnPostStarting()
         {
@@ -60,7 +62,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             started = true;
             activated = true;
 
-            
+            words = inputString.Split(" ");
             if (words.Contains("exit"))
             {
                 history = new List<List<string>>();
@@ -70,8 +72,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             if (ModelState.IsValid)
             {
                 inputString = inputString.ToLower();
-
-                words = inputString.Split(" ");
+                
                 wordNum = words.Length;
 
                 aNum = inputString.Split('a').Length - 1;
@@ -84,8 +85,7 @@ namespace ASPdotNet_StringVerarbeitung.Pages
                 {
                     if (vokale.Contains(character))
                     {
-                        newChar = 'i';
-                        newString += newChar;
+                        newString += 'i';
                     }
                     else
                     {
@@ -98,8 +98,6 @@ namespace ASPdotNet_StringVerarbeitung.Pages
             history.Add(historyEntry);
             historyOutput = history;
 
-            ViewData["result"] = newString;
-            ViewData["wordNum"] = wordNum;
             return Page();
         }
 
