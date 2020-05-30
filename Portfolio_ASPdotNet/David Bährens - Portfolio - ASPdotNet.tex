@@ -291,6 +291,7 @@ bottom=2cm]
 			\acro{SPA}{Single Page Application}
 			\acro{Z.}{Zeile}
 			\acro{RP}{Razor Page}
+			\acro{i. d. R.}{in der Regel}
 		\end{acronym}
 	\end{singlespace}
 	\clearpage
@@ -382,7 +383,7 @@ public class IndexModel : PageModel
 	public string IBAN { get; set; }
 }
 	\end{lstlisting}
-	Wurde nun keine IBAN, bei einem Request an den Server, eingegeben wird unterhalb des Textfeldes eine Fehlermeldung ausgegeben. Ein weiteres Beispiel wäre der \texttt{asp-page-handler}, mit dem ein spezieller Page Handler ausgeführt werden kann. Bei Handler Methoden handelt es sich um Funktionen, die automatisch bei einem entsprechenden HTTP-Request ausgeführt werden. Die Handler Methode \texttt{OnGet()}~wird beispielsweise bei einer Get-Anfrage an den Server ausgeführt. Mit dem \texttt{asp-page-handler} können nun verschiedene Page Handler implementiert werden. So würde ein  \texttt{OnPostProcessing()}~Handler nur bei einem bestätigen von \texttt{<button type=\glqq submit\grqq~asp-page-handler=\glqq Processing\grqq>Submit</button>} ausgeführt werden.\footnote{o. V., Page Handler, 2018} \footnote{Anderson, Rick; Mullen, Taylor; Vicarel, Dan, Razor Syntax, 2020} \\
+	Wurde nun keine IBAN, bei einem Request an den Server, eingegeben wird unterhalb des Textfeldes eine Fehlermeldung ausgegeben. Ein weiteres Beispiel wäre der \texttt{asp-page-handler}, mit dem ein spezieller Page Handler ausgeführt werden kann. Bei Handler Methoden handelt es sich um Funktionen, die automatisch bei einem entsprechenden HTTP-Request ausgeführt werden. Die Handler Methode \texttt{OnGet()}~wird beispielsweise bei einer Get-Anfrage an den Server ausgeführt. Mit dem \texttt{asp-page-handler} können nun verschiedene Page Handler implementiert werden. So würde ein  \texttt{OnPostProcessing()}~Handler nur bei einem bestätigen von \texttt{<button type="{} submit"{}asp-page-handler="{}Processing"{}>Submit</button>} ausgeführt werden.\footnote{o. V., Page Handler, 2018} \footnote{Anderson, Rick; Mullen, Taylor; Vicarel, Dan, Razor Syntax, 2020} \\
 	Jede Page beginnt stehts mit \texttt{@page} in der ersten Zeile. Hierdurch weiß ASP.Net, dass es diese datei wie eine RP behandeln muss. Hierdurch kann die Page selber Aktionen ausführen und ist nicht auf einen Controller angewiesen. Des Weiteren muss ein \texttt{@model} angegeben werden, mit dem dazugehörigen Model dieser View. Bei RP's ist dies in der Regel (i. d. R.) das PageModel.\footnote{Jones, Matthew, Razor vs. MVC, 2019}
 	
 	
@@ -452,16 +453,16 @@ public IActionResult OnPostStarting()
 	</div>
 	<button type="submit" asp-page-handler="Processing" form="inputForm">Absenden</button>
 </form>
-	\end{lstlisting} ~\\
+	\end{lstlisting} ~\sPar
 	Bei der serverseitigen Validierung mit C\# mitteln wird überprüft, ob mindestens zehn wörter eingegeben wurden. Dies wird mit Regular Expressions (RegEx) überprüft. 
 	\lstset{style=csharp}
 	\begin{lstlisting}
 [BindProperty]
 [RegularExpression(@"(.*\s){9}..*", ErrorMessage = "Upps. Sie haben zu wenig Wörter eingegeben.")]
 public string inputString { get; set; }
-	\end{lstlisting} ~\\
+	\end{lstlisting}
 	Stimmt die eingegebene Zeichenkette nicht mit der RegEx überein wird eine Fehlermeldung ausgegeben. Diese sollte allerdings abschreckender wirken, als die einfache \glqq required\grqq~Validierung. Daher wird sie an einer anderen Stelle ausgegeben und später mit Bootstrap gestaltet.
-	Die Kennzeichnung, wo die Fehlermeldung stehen soll erfolgt mit \texttt{<span asp-validation-for=\glqq inputString\grqq></span>}. \\
+	Die Kennzeichnung, wo die Fehlermeldung stehen soll erfolgt mit \texttt{<span asp-validation-for="{} inputString"{}></span>}. \sPar
 	Nun muss der Input verarbeitet werden und alle Vokale durch ein \glqq i\grqq~ersetzt werden. Dies geschieht in der \glqq OnPostProcessing() \grqq~Handler-Methode. Da er nur verarbeitet werden soll, wenn die Validierung positiv war, wird diese in Z. 12 abgefragt. War sie positiv wird über jeden Buchstaben in der Zeichenkette iteriert und mit den Vokalen in dem \glqq vokale-Array\grqq verglichen. Ist ein Buchstabe in dem Vokale Array enthalten, wird er durch ein \glqq i\grqq~ersetzt (Z. 14-24). Der dadurch neu entstandene String wird in Zeile 28 zurückgegeben. Außerdem wird beim eingeben des Wortes \glqq exit\grqq der User auf die Startseite zurück geleitet (Z. 5-10).
 	\lstset{style=csharp}
 	\begin{lstlisting}
@@ -497,7 +498,7 @@ public IActionResult OnPostProcessing()
 	ViewData["result"] = newString;
 	return Page();
 }
-	\end{lstlisting} ~\\
+	\end{lstlisting} 
 	Das Ergebnis wird nun in der View angezeigt. Dabei soll überprüft werden, ob die Validierung positiv oder negativ war. War sie positiv wird, der neue String angezeigt, ansonsten die bereits erwähnte Validierungsfehlermeldung. Es musste hierzu eine weitere Variable \glqq activated\grqq eingeführt werden, die defaultmäßig false ist und beim ersten ausführen von OnPostProcessing() true gesetzt wird. Dies liegt daran, dass ansonsten zu Beginn er Anwendung die textarea bereits validiert würde und eine Fehlermeldung ausgegeben wurde, obwohl der Benutzer noch gar nicht die Möglichkeit hatte eine Eingabe zu tätigen.
 	\lstset{style=cshtml}
 	\begin{lstlisting}
@@ -509,7 +510,7 @@ else if (!@ModelState.IsValid && @Model.activated)
 {
 	<span asp-validation-for="inputString"></span>
 }
-	\end{lstlisting} ~\\
+	\end{lstlisting}
 	
 	
 	
@@ -524,7 +525,7 @@ else if (!@ModelState.IsValid && @Model.activated)
 List<string> historyEntry = new List<string>();
 static List<List<string>> history = new List<List<string>>();
 public List<List<string>> historyOutput = new List<List<string>>();
-	\end{lstlisting} ~\\
+	\end{lstlisting} 
 	In der View wird dann mit einer foreach-Schleife über die Liste iteriert und eine Tabelle mit den einzelnen Werten erstellt.
 	 \lstset{style=cshtml}
 	 \begin{lstlisting}
@@ -543,7 +544,7 @@ public List<List<string>> historyOutput = new List<List<string>>();
 	}
 	</table>
 }
-	 \end{lstlisting} ~\\
+	 \end{lstlisting}
 	 Zuletzt muss die Historie bei jedem Beenden der Anwendung ebenfalls gelöscht werden. Dies geschieht zum Einen in der bereits erwähnten Handler-Methode OnPostExitPage(), indem die statische Variable \texttt{history} einfach mit \texttt{history = new List<List<string>>();} neu initialisiert wird. Zum anderen muss diese Initialisierung auch in die bereits erwähnte if-Bedingung, zur Überprüfung, ob das Wort \glqq exit\grqq~eingegeben wurde, hinzugefügt werden:
 	 \lstset{style=csharp}
 	 \begin{lstlisting}
@@ -570,12 +571,56 @@ uNum = inputString.Split('u').Length - 1;
 	\begin{lstlisting}
 	<input type="hidden" value="@Model.aNum" id="aNum" />
 	\end{lstlisting}
-	Nun lässt sich in JS einfach auf die Werte dieser Input-Elemente, über den Ausdruck \texttt{document.getElementById("aNum").value}, zugreifen. Diese Werte werden dann JS-Variablen zugewiesen und in dem Google Chart verwendet (siehe Anhang 2)
+	Nun lässt sich in JS einfach auf die Werte dieser Input-Elemente, über den Ausdruck \texttt{document.getElementById("{}aNum"{}).value}, zugreifen. Diese Werte werden dann JS-Variablen zugewiesen und in dem Google Chart verwendet (siehe Anhang 2). Der Chart selber wird dann innerhalb des folgenden div's angezeigt:
+	\lstset{style=cshtml}
+	\begin{lstlisting}
+<div id="piechart" style="width: 100%; height: 500px;"></div>
+	\end{lstlisting}
+	\sPar
+	Die eingegebenen Wörter sollen ebenfalls gezählt werden. Hierzu wird die eingegebene Zeichenkette an einem Leerzeichen gesplittet auf das Ergebnis wieder die \texttt{Length}-Methode angewendet.
+	\lstset{style=csharp}
+	\begin{lstlisting}
+words = inputString.Split(" ");
+wordNum = words.Length;
+	\end{lstlisting}
+	 
 	 
 	 
 	 
 	 
 	\subsection{Graphische Gestaltung}
+	Für die optische Gestaltung wurde das bereits erläuterte Bootstrap Framework verwendet. Damit wurden verschiedene Bootstrap-Klassen den HTML-Elementen hinzugefügt, um ihr Design zu verändern. Beispielsweise wurden Schatten mit \texttt{shadow-lg} oder Buttons mit \texttt{bg-success} grün gefärbt. Jegliche HTML-Formulare wurden mit Bootstrap mitteln designt. So erhielt der \glqq Absenden\grqq-Button z. B. die \texttt{btn-outline\-sucess} Klasse und die textarea die \texttt{form-control} Klasse. Außerdem wurde der Header mit der Klasse \texttt{sticky-top}~sticky gemacht. Dies bedeutet, dass er beim scrollen der Webseite mit scrollt und immer an der selben Position bleibt. Ein weiterer Aspekt war die Gestaltung der Ausgabe der überarbeiteten Zeichenkette und der Ausgabe eines serverseitigen Validierungsfehlers. Beides wurde mit einem \texttt{Jumbotron}-Element realsiert, also einer Art Textbox, die bei einer erfolgreichen Anfrage grün und bei einem Validierungsfehler rot gefärbt wird. Die clientseitige Valdierung wird über die Klasse \texttt{invalid-feedback} realisiert. Die Tabelle in der die Historie aufgelistet ist wurde ebenfalls über Bootstrap mit verschiedenen table-Klassen realisiert. \\
+	Die Webseite sieht nach dieser Gestaltung folgendermaßen aus:
+	\begin{figure}[h]
+		\centering
+		\caption{RP - Startseite}
+		\includegraphics[width=1\textwidth]{img/startpage.jpg} \\
+		\label{fig:startpage}
+	\end{figure} \\
+	\begin{figure}[h]
+		\centering
+		\caption{RP - Eingabe}
+		\includegraphics[width=1\textwidth]{img/rp_form.jpg} \\
+		\label{fig:input}
+	\end{figure} \\
+\begin{figure}[h]
+	\centering
+	\caption{RP - Ausgabe mit Historie}
+	\includegraphics[width=1\textwidth]{img/rp-output.jpg} \\
+	\label{fig:ouput}
+\end{figure} \\
+\begin{figure}[h]
+	\centering
+	\caption{RP - Validierungsfehler}
+	\includegraphics[width=1\textwidth]{img/error.jpg} \\
+	\label{fig:error}
+\end{figure} \\
+\begin{figure}[h]
+	\centering
+	\caption{RP - Statistik}
+	\includegraphics[width=1\textwidth]{img/statistik.jpg} \\
+	\label{fig:statistic}
+\end{figure} \\
 	\clearpage
 	
 	

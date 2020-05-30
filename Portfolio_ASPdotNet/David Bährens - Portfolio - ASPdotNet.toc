@@ -14,5 +14,5 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Historie}{13}%
 \contentsline {subsubsection}{\numberline {3.2.2}Statistik}{14}%
 \contentsline {subsection}{\numberline {3.3}Graphische Gestaltung}{14}%
-\contentsline {section}{Literatur}{19}%
-\contentsline {section}{Selbstständigkeitserklärung}{20}%
+\contentsline {section}{Literatur}{22}%
+\contentsline {section}{Selbstständigkeitserklärung}{23}%
