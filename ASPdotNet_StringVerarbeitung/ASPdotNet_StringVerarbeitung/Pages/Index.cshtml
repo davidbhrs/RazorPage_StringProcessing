@@ -19,27 +19,38 @@
     <br />
     <br />
 
+    <!--Eingabeformular mit einer clientseitigen Validierung-->
     <form method="post" class="needs-validation" id="inputForm" novalidate>
         <div class="input-group">
+            <!--Mit Bootstrap designtes Eingabefeld-->
             <div class="input-group-prepend">
                 <span class="input-group-text">Zeichenkette</span>
             </div>
+            <!--Wert des Eingabefeldes wird an das Page Model gebunden.
+                textarea muss für die clientseitige Validierung mit "required gekennzeichnet werden"-->
             <textarea asp-for="inputString" placeholder="Zeichenkette eingeben" class="form-control shadow-lg" aria-label="inputString" id="inputString" required></textarea>
+            <!--Wird beim Fehlschlagen der clientseitigen Validierung angezeigt-->
             <div class="invalid-feedback">
                 Bitte geben Sie eine Zeichenkette ein. Sonst funktionert das Ganze nicht...
             </div>
         </div>
         <br />
     </form>
+    <!--Exit Formular. Für das Beenden der Anwendung wird eine weitere POST-Anfrage benötigt-->
     <form method="post" id="exitForm"></form>
+    <!--Damit die Buttons in einer Reihe angezeigt werden können, wurde sie von ihren Formularen getrennt. Den Buttons wird einzeln ihr jeweiliges Formular zugewiesen-->
     <div class="mb-5 pb-5">
+        <!--Bestätigungs-Button löst die Handler Methode "Processing" aus-->
         <button type="submit" class="btn btn-outline-success ml-4 mr-4 w-25 mt-2 shadow-lg" asp-page-handler="Processing" form="inputForm">Absenden</button>
+        <!--JS wurde benötigt, um das Eingabefeld vollständig bereinigen zu können (ansonsten wird nur auf den letzten Stand resettet, dieser verändert sich aber bei jeder weiteren POST-Anfrage)-->
         <button type="button" class="btn btn-outline-warning ml-4 mr-4 w-25 mt-2 shadow-lg" onclick="resettingButton()" form="inputForm">Zurücksetzen</button>
+        <!--Exit Button löst Handler Methode "Exit Page" aus-->
         <button type="submit" class="btn btn-outline-danger ml-4 mr-4 w-25 mt-2 shadow-lg" asp-page-handler="ExitPage" form="exitForm">Exit</button>
     </div>
 
     <br />
 
+    <!--War die serverseititge Validierung erfolgreich wird die überarbeitete Zeichenkette in einem Bootstrap Jumbotron Feld angezeigt-->
     @if (@ModelState.IsValid)
     {
         <div class="jumbotron jumbotron-fluid bg-success my-auto shadow-lg rounded p-4 mt-5 pt-5" id="jumbo">
@@ -49,11 +60,13 @@
             </div>
         </div>
     }
+    // war die Validierung negativ, das Input-Formular wurde aber schon einmal ausgeführt, wird eine individuelle Fehlermeldung angezeigt
     else if (!@ModelState.IsValid && @Model.activated)
     {
         <div class="jumbotron jumbotron-fluid bg-danger my-auto shadow-lg rounded p-4 text-light">
             <h2 class="display-4 mt-4 mb-4 text-left"> Überarbeitete Zeichenkette </h2>
             <div class="container h-100 d-flex text-left">
+                <!--Ausgabe der serverseitigen Validierungs-Fehlermeldung-->
                 <span class="lead validation rounded p-1 font-weight-normal text-light" asp-validation-for="inputString"></span>
             </div>
         </div>
@@ -61,14 +74,16 @@
 }
 // Defaultmäßig wird erst mal die folgende Startseite angezeigt
 else
-{
+{ 
     <form method="post">
+        <!--Startknopf-->
         <button type="submit" id="startButton" class="btn btn-success btn-lg shadow-lg rounded" asp-page-handler="Starting">Anwendung starten</button>
     </form>
 }
 
 <br />
 
+<!--Wurde die Anwendung schon einmal bestätigt wird die Historie in einer Tabelle angezeigt-->
 @if (@Model.activated)
 {
     <h2 class="display-4 mt-5 pt-5 mb-4">Historie</h2>
@@ -80,6 +95,7 @@ else
                     <th scope="col">Überarbeitete Zeichenkette</th>
                 </tr>
             </thead>
+            <!--Über die history-Liste wird iteriert, um die Tabellenzellen zu erstellen-->
             @foreach (var entry in @Model.historyOutput)
             {
                 <tbody bg-light text-dark>
@@ -95,18 +111,23 @@ else
 
 
 
-    <!--Google Charts-->
+    <!--Google Chart-->
+
+    <!--Versteckte Input Felder, denen die Anzahl der erstezten Vokale zugewiesen wird-->
     <input type="hidden" value="@Model.aNum" id="aNum" />
     <input type="hidden" value="@Model.eNum" id="eNum" />
     <input type="hidden" value="@Model.iNum" id="iNum" />
     <input type="hidden" value="@Model.oNum" id="oNum" />
     <input type="hidden" value="@Model.uNum" id="uNum" />
 
+    <!--JS, in dem die Werte der versteckten Input Felder ausgelesen werden, und danach der Chart initialisiert wird-->
     <script type="text/javascript" src="~/js/statistic.js"></script>
 
     <h2 class="display-4 mt-5 pt-5 mb-4">Statistik</h2>
+    <!--Anzahl der eingegeben Wörter-->
     <p class="lead">Anzahl eingegebener Wörter = @ViewData["wordNum"]</p>
-    <p>Hier erhalten Sie einen Überlblick, welche Vokale wie häufig durch den Vokal "i" ersetzt wurden.</p>
+    <p>Hier erhalten Sie einen Überlblick, welche Vokale im letzten Durchlauf wie häufig durch den Vokal "i" ersetzt wurden.</p>
+    <!--Visualisierung des Charts-->
     <div id="piechart" style="width: 100%; height: 500px;"></div>
 
 }

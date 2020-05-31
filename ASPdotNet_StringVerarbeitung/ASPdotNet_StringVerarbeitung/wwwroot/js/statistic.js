@@ -1,4 +1,5 @@
-﻿a = Number(document.getElementById("aNum").value);
+﻿// Auslesen der Werte, der versteckten Inputfelder
+a = Number(document.getElementById("aNum").value);
 e = Number(document.getElementById("eNum").value);
 o = Number(document.getElementById("oNum").value);
 u = Number(document.getElementById("uNum").value);
@@ -16,6 +17,7 @@ function drawChart() {
         ['u', u]
     ]);
 
+    // Design des Charts (transparenter Hintergrund, weiße Schrift)
     var options = {
         title: 'Ersetzte Vokale',
         backgroundColor: { fill: 'transparent' },
