@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.22)  30 MAY 2020 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.4.15)  2 JUN 2020 22:11
 entering extended mode
 **"./David Bährens - Portfolio - ASPdotNet.tex"
 ("David Bährens - Portfolio - ASPdotNet.tex"
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-05-15>
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+L3 programming layer <2020-03-06>
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -20,35 +20,39 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+) ("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
+y"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2020/05/13 3.44 The Babel package
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2020/05/13 3.44 Babel common definitions
-\babel@savecnt=\count175
-\U@D=\dimen135
-\l@babelnohyphens=\language78
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
-\bbl@readstream=\read2
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/02/28 3.41 The Babel package
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def
+"
+File: switch.def 2020/02/28 3.41 Babel switching mechanism
 )
-\bbl@dirlevel=\count176
-
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/babel-english\english.ldf"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-english\engl
+ish.ldf"
 Language: english 2017/06/06 v3.3r English support from the babel system
+
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/02/28 3.41 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
+
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
+ef")
+\bbl@readstream=\read2
+\bbl@dirlevel=\count176
+)
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
@@ -56,32 +60,37 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language72) on input line 108.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/babel-german\ngerman.ldf"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-german\ngerm
+an.ldf"
 Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthogra
 phy)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/babel-german\ngermanb.ldf"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-german\ngerm
+anb.ldf"
 Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogr
 aphy)
 Package babel Info: Making " an active character on input line 121.
 )))
-("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\helvet.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\helvet.sty"
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty
+"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+ ("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty
+"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count177
@@ -97,11 +106,14 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutvoffset=\dimen143
 \Gm@dimlist=\toks18
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex/latex/setspace\setspace.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+cfg"))
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.
+sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/footmisc\footmisc.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/footmisc\footmisc.
+sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks19
 \footnotemargin=\dimen144
@@ -115,7 +127,8 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/sectsty\sectsty.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sectsty\sectsty.st
+y"
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 
@@ -127,7 +140,9 @@ LaTeX Warning: Command \underbar  has changed.
 LaTeX Warning: Command \underline  has changed.
                Check if current package is valid.
 
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty"
+)
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.
+sty"
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box45
 \beforetitleunit=\skip49
@@ -139,27 +154,32 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen148
 \titlewidthfirst=\dimen149
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen150
 \Gin@req@width=\dimen151
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.st
+y"
 \wrapoverhang=\dimen152
 \WF@size=\dimen153
 \c@WF@wrappedlines=\count181
@@ -167,33 +187,38 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \WF@everypar=\toks21
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/acronym\acronym.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/acronym\acronym.st
+y"
 Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/bigfoot\suffix.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bigfoot\suffix.sty
+"
 Package: suffix 2006/07/15 1.5a Variant command support
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/xstring\xstring.sty"
-("C:\Program Files\MiKTeX 2.9\tex/generic/xstring\xstring.tex"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xstring\xstring.st
+y"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xstring\xstring.
+tex"
 \integerpart=\count182
 \decimalpart=\count183
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
 \AC@clearlist=\toks22
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
+) ("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
+sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count184
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color
+.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -207,43 +232,53 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/upquote\upquote.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/upquote\upquote.st
+y"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/accsupp\accsupp.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/accsupp\accsupp.st
+y"
 Package: accsupp 2019/12/05 v0.6 Accessibility support by marked content (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/pdfescape\pdfescape.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\pdfesc
+ape.sty"
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.
+sty"
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexcmds.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexc
+mds.sty"
 Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/infwarerr\infwarerr.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infwar
+err.sty"
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/kvoptions\kvoptions.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoption
+s.sty"
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetkeys.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetk
+eys.sty"
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/accsupp\accsupp-pdftex.def"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/accsupp\accsupp-pd
+ftex.def"
 File: accsupp-pdftex.def 2019/12/05 v0.6 accsupp driver for pdfTeX (HO)
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+sty"
 \lst@mode=\count185
 \lst@gtempboxa=\box47
 \lst@token=\toks23
@@ -257,24 +292,26 @@ File: accsupp-pdftex.def 2019/12/05 v0.6 accsupp driver for pdfTeX (HO)
 \lst@lineno=\count190
 \lst@maxwidth=\dimen157
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 \c@lstnumber=\count191
 \lst@skipnumbers=\count192
 \lst@framebox=\box48
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
-File: listings.cfg 2020/03/24 1.8d listings configuration
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+cfg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/dblfloatfix\dblfloatfix.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/dblfloatfix\dblflo
+atfix.sty"
 Package: dblfloatfix 2012/12/31 v1.0a (JAW)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\fixltx2e.sty"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fixltx2e.sty"
 Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
 Applying: [2015/01/01] Old fixltx2e package on input line 46.
-
 
 Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 (fixltx2e)                All fixes are now in the LaTeX kernel.
@@ -284,12 +321,13 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 )
 \@dblbotnum=\count193
 \c@dblbotnumber=\count194
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
-File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
+)
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
+d-pdfmode.def"
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count195
 \l__pdf_internal_box=\box49
-)
-("David Bährens - Portfolio - ASPdotNet.aux")
+) ("David Bährens - Portfolio - ASPdotNet.aux")
 \openout1 = `"David Bährens - Portfolio - ASPdotNet.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 228.
@@ -309,7 +347,7 @@ LaTeX Font Info:    ... okay on input line 228.
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 22
 8.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -349,7 +387,9 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count196
 \scratchdimen=\dimen158
@@ -362,7 +402,9 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 \MPnumerator=\count266
 \makeMPintoPDFobject=\count267
 \everyMPtoPDFconversion=\toks25
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+)
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
+pdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -412,7 +454,7 @@ Overfull \hbox (22.76402pt too wide) in paragraph at lines 259--260
 
 [1
 
-{C:/Users/David/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/datev
+{C:/Users/dbaeh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/datev
 .png> <./img/dhbw.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 16.41594pt on input line 269.
@@ -469,8 +511,10 @@ File: img/aufbau.jpg Graphic file (type jpg)
 <use img/aufbau.jpg>
 Package pdftex.def Info: img/aufbau.jpg  used on input line 339.
 (pdftex.def)             Requested size: 199.16928pt x 316.04538pt.
- [3] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
-File: lstlang1.sty 2020/03/24 1.8d listings language file
+ [3]
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 Underfull \hbox (badness 1028) in paragraph at lines 341--346
 \T1/phv/m/n/12 In ww-wroot be-fin-den sich sta-ti-sche Da-
@@ -478,19 +522,22 @@ Underfull \hbox (badness 1028) in paragraph at lines 341--346
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
 46.
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 347.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 347.
- [4 <./img/aufbau.jpg>] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlan
-g1.sty"
-File: lstlang1.sty 2020/03/24 1.8d listings language file
+
+[4 <./img/aufbau.jpg>]
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
 Overfull \hbox (7.05298pt too wide) in paragraph at lines 365--367
 \T1/phv/m/n/12 Au�erdem exis-tie-ren ver-schie-de-ne Tag-Helpers, al-so wie-der
@@ -520,9 +567,10 @@ Underfull \hbox (badness 1168) in paragraph at lines 392--393
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
 463.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
+("C:\Users\dbaeh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [10]
+)
+[10]
 Overfull \hbox (7.97346pt too wide) in paragraph at lines 516--518
 \T1/phv/m/n/12 Va-ria-ble \T1/cmtt/m/n/12 inputString\T1/phv/m/n/12 , al-so die
  ein-ge-ge-be-ne Zei-chen-ket-te und die Va-ria-ble \T1/cmtt/m/n/12 newString\T
@@ -606,24 +654,25 @@ Overfull \hbox (35.99998pt too wide) in paragraph at lines 750--755
 
 ] ("David Bährens - Portfolio - ASPdotNet.aux") ) 
 Here is how much of TeX's memory you used:
- 7423 strings out of 480799
- 102538 string characters out of 2905528
- 661580 words of memory out of 3000000
- 23258 multiletter control sequences out of 15000+200000
+ 7325 strings out of 480934
+ 104438 string characters out of 2899917
+ 656991 words of memory out of 3000000
+ 23021 multiletter control sequences out of 15000+200000
  581241 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,67p,1795b,1647s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\David\AppData\Loca
-l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcit1000.pk> <C:\Users\David\Ap
+ 38i,10n,67p,1800b,1647s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\dbaeh\AppData\Loca
+l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcit1000.pk> <C:\Users\dbaeh\Ap
 pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\User
-s\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk
-> <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
-ctt1200.pk> <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
-c/dpi600\ectt1000.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
-C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on "David Bährens - Portfolio - ASPdotNet.pdf" (26 pages, 70123
-8 bytes).
+s\dbaeh\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk
+> <C:\Users\dbaeh\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
+ctt1200.pk> <C:\Users\dbaeh\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
+c/dpi600\ectt1000.pk>{C:/Users/dbaeh/AppData/Local/Programs/MiKTeX 2.9/fonts/en
+c/dvips/base/8r.enc}<C:/Users/dbaeh/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb><C:/Users/dbaeh/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on "David Bährens - Portfolio - ASPdotNet.pdf" (26 pages, 70126
+3 bytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
